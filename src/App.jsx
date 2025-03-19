@@ -1,12 +1,18 @@
-import './css/App.css'
+import React from "react";
+import ProductCard from "./components/ProductCard";
+import products from "./data/products";
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <h1>HI</h1>
-    </>
-  )
-}
+    <div className="app">
+      <h1>Tienda Virtual</h1>
+      <div className="product-list">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default App
+export default App;

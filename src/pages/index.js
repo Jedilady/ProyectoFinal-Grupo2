@@ -1,0 +1,9 @@
+export { default as LoginPage } from './LoginPage';
+export { default as HomePage } from './HomePage';
+export { default as RegisterPage } from './RegisterPage';
+export { default as ProductIdPage } from './ProductIdPage';
+export { default as ProductsPage } from './ProductsPage';
+export { default as AdminPage } from './AdminPage';
+export { default as CartPage } from './CartPage';
+export { default as AboutPage } from './AboutPage';
+export { default as ContactPage } from './ContactPage';

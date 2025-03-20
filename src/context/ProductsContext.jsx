@@ -1,5 +1,5 @@
 //importación del array de productos:
-import products from "../data/products";
+import {getAllProducts} from "../data/products";
 //importación de context y hooks from react:
 import { createContext} from "react";
 import { useState, useEffect } from "react";
@@ -15,10 +15,10 @@ export function AllProductsProvider({children}) {
 
     //carga inicial del array mediante useEffect para evitar reloads innecesario
     useEffect(() => { 
-        setAllProductos(products);
+        setAllProductos(getAllProducts());
       }, []);
     
-      console.log(allProducts);
+      console.log("array del contexto de productos:", allProducts);
       
     //craeacion del proveedor y los datos a proveer 
     //"children" sigifica que TODO el que esté dentro del provider podrá escuchar los datos

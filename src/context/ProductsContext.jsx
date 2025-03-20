@@ -5,7 +5,7 @@ import { createContext} from "react";
 import { useState, useEffect } from "react";
 
 //Creación del CONTEXTO
-const ProductsContext = createContext();
+export const ProductsContext = createContext();
 
 //Funcion PROVIDER donde se almacena el array de productos
 export function AllProductsProvider({children}) {

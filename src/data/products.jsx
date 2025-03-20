@@ -33,7 +33,3 @@ const products = [
 ];
 
 export default products;
-
-export const getAllProducts = ()=>{
-  return products;
-}

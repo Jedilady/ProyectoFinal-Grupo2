@@ -1,5 +1,6 @@
 //importación del array de productos:
-import {getAllProducts} from "../data/products";
+//import {getAllProducts} from "../data/products";
+import products from "../data/products";
 //importación de context y hooks from react:
 import { createContext} from "react";
 import { useState, useEffect } from "react";
@@ -15,7 +16,8 @@ export function AllProductsProvider({children}) {
 
     //carga inicial del array mediante useEffect para evitar reloads innecesario
     useEffect(() => { 
-        setAllProductos(getAllProducts());
+        //setAllProductos(getAllProducts());
+        setAllProductos(products);
       }, []);
     
       console.log("array del contexto de productos:", allProducts);

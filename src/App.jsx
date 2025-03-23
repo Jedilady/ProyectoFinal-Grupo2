@@ -9,6 +9,7 @@ import {
   CartPage,
   AboutPage,
   ContactPage,
+  PaymentPage,
 } from './pages';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Product/:productId" element={<ProductIdPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

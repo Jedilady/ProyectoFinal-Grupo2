@@ -1,6 +1,10 @@
 import { useContext, useState, useEffect } from "react";
-import { ProductsContext } from "../context/ProductsContext";
-import { useMediaQuery } from "../customs/useMediaQuery";
+import { ProductsContext } from "../../context/ProductsContext";
+import { useMediaQuery } from "../../customs/useMediaQuery";
+import { Link } from "react-router-dom";
+
+import "./HomeProductCard.css"
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const HomeProductCard = ({ category }) => {
     const { allProducts } = useContext(ProductsContext);
@@ -28,13 +32,18 @@ const HomeProductCard = ({ category }) => {
     
 
     return (
-        <>
+        <div className="home-product-grid">
         {allFiltered.slice(0, number).map((producto) => (
-            <div key={producto.id} >
-                <img src={producto.images.model} alt={`${producto.name} - Modelo`} />
+            <div className="home-product-img" key={producto.id} >
+                <Link to={`/Product/:${producto.id}`}>
+                    <img src={producto.images.model} alt={`${producto.name} - Modelo`} />
+                </Link>
             </div>
         ))}
-        </>
+            <div className="home-product-bt">
+                <a className="secondary-button">Ver todo <FaLongArrowAltRight /></a>
+            </div>
+        </div>
     );
 }
 

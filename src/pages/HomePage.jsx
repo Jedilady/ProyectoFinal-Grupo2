@@ -1,19 +1,23 @@
-import HomeProductCard from "../components/HomeProductCard";
+import HomeProductCard from "../components/HomeProductCard/HomeProductCard";
 
 
 function HomePage() {
 
   return (
     <div>
-      <h1>Aquí va el banner</h1>      
-      <div className="product-grid">
+      <span>Aquí va el banner</span>      
+      <section className="home-section">
         <h2>Blusas</h2>
         <HomeProductCard category={"Blusas"} />
+      </section>
+      <section className="home-section">
         <h2>Pantalones</h2>
         <HomeProductCard category={"Pantalones"} />
+      </section>
+      <section className="home-section">
         <h2>Vestidos</h2>
         <HomeProductCard category={"Vestidos"} />
-    </div>
+      </section>
     </div>
   );
 }

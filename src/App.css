@@ -1,2 +1,36 @@
 @import "css/reset.css";
 @import "css/basics.css";
+
+
+/*--- PAGES ---*/
+/* HOME */
+.home-section {
+    margin-top: 2rem;
+}
+
+.home-section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+@media screen and (min-width: 413px) {
+    .home-section {
+        font-size: 4rem;
+    }
+
+    .home-section h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+@media screen and (min-width: 1439px) {
+    .home-section {
+        font-size: 5rem;
+    }
+    .home-section h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,7 +1,7 @@
 function PaymentPage() {
   return (
     <div>
-      <h1>Esto es Payment</h1>\
+      <h1>Esto es Payment</h1>
     </div>
   );
 }

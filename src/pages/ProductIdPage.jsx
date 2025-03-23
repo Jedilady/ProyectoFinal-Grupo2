@@ -1,7 +1,7 @@
 function ProductIdPage() {
   return (
     <div>
-      <h1>Esto es ProductIdPage</h1>\
+      <h1>Esto es ProductIdPage</h1>
     </div>
   );
 }

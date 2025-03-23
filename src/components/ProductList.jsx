@@ -1,3 +1,4 @@
+//NOTE FROM JUVILI: DEPRECATED - This is not needed with the use of the PRODUCT CONTEXT
 import React, { useEffect, useState } from 'react';
 //import 'src/components/ProductList.css'; //aplicar Css
 import ProductCard from './ProductCard'; // Importar el componente ProductCard

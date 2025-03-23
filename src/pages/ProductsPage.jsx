@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { ProductsContext } from "../context/ProductsContext";
 import ProductCard from "../components/ProductCard";
-//De Delcy:
-//import ProductList from "../components/ProductList";  // Asegúrate de que la ruta sea correcta
 
 function ProductsPage() {
   //Constante para manejar la importación del contexto

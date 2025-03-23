@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+//import 'src/components/ProductList.css'; //aplicar Css
+import ProductCard from './ProductCard'; // Importar el componente ProductCard
 import productsData from '../data/products.json'; // Importa el array de productos
 
 // Muestra la lista de productos y maneja el estado de los productos
@@ -7,18 +9,19 @@ function ProductList() {
   const [filteredProducts, setFilteredProducts] = useState([]); // Inicialmente muestra todos los productos
 
   useEffect(() => {
+    
     setProducts(productsData); // Cargar los productos desde el archivo JSON
     setFilteredProducts(productsData); // Inicializa los productos filtrados
   }, []);
 
-  // Función para filtrar productos por categoría
+  //Función para filtrar productos por categoría
   const filterByCategory = (category) => {
-    setFilteredProducts(products.filter(product => product.category === category));
-  };
+  setFilteredProducts(products.filter(product => product.category === category));
+};
 
-  // Función para filtrar productos disponibles (stock > 0)
+  //Función para filtrar productos disponibles (stock > 0)
   const filterAvailable = () => {
-    setFilteredProducts(products.filter(product => product.stock > 0));
+  setFilteredProducts(products.filter(product => product.stock > 0));
   };
 
   return (
@@ -33,24 +36,14 @@ function ProductList() {
 
       <div className="product-list">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="product">
-            <img src={product.images.front} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
-            <p>Categoría: {product.category}</p>
-            <p>Precio: ${product.price}</p>
-            <p>Tamaños disponibles: {product.sizes.join(", ")}</p>
-            <p>Colores disponibles: {product.color.join(", ")}</p>
-            <p>Stock: {product.stock}</p>
-          </div>
-        ))}
+          <ProductCard key={product.id} product={product} />
+      ))}
       </div>
     </div>
   );
 }
 
 export default ProductList;
-
 
 
 

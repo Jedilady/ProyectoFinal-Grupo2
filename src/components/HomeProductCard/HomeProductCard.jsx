@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
 import { useMediaQuery } from "../../customs/useMediaQuery";
 import { Link } from "react-router-dom";
+import ProductsFiltered from "../ProductsFiltered";
 
 import "./HomeProductCard.css"
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -41,6 +42,9 @@ const HomeProductCard = ({ category }) => {
             </div>
         ))}
             <div className="home-product-bt">
+                <ProductsFiltered category={"Figuras"}>
+                    Ver todo <FaLongArrowAltRight />
+                </ProductsFiltered>
                 <a className="secondary-button">Ver todo <FaLongArrowAltRight /></a>
             </div>
         </div>

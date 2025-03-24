@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ProductsContext } from "../context/ProductsContext";
-import ProductCard from "../components/ProductCard";
+//import { ProductsContext } from "../context/ProductsContext";
+//import ProductCard from "../components/ProductCard";
 
 function ProductsPage() {
   //Constante para manejar la importación del contexto

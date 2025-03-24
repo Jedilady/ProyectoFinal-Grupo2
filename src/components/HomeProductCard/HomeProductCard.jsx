@@ -2,7 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
 import { useMediaQuery } from "../../customs/useMediaQuery";
 import { Link } from "react-router-dom";
-import ProductsFiltered from "../ProductsFiltered";
 
 import "./HomeProductCard.css"
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -36,16 +35,15 @@ const HomeProductCard = ({ category }) => {
         <div className="home-product-grid">
         {allFiltered.slice(0, number).map((producto) => (
             <div className="home-product-img" key={producto.id} >
-                <Link to={`/Product/:${producto.id}`}>
+                <Link to={`/Product/${producto.id}`}>
                     <img src={producto.images.model} alt={`${producto.name} - Modelo`} />
                 </Link>
             </div>
         ))}
             <div className="home-product-bt">
-                <ProductsFiltered category={"Figuras"}>
+            <Link to={`/products/${category}`} className="secondary-button" category={category}>
                     Ver todo <FaLongArrowAltRight />
-                </ProductsFiltered>
-                <a className="secondary-button">Ver todo <FaLongArrowAltRight /></a>
+            </Link>
             </div>
         </div>
     );

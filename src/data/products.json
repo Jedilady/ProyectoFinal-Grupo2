@@ -615,21 +615,6 @@
 }
 },
 {
-    "id": 41,
-    "name": "Vestido Corto Ligero",
-    "category": "Vestidos",
-    "price": 21.00,
-    "sizes": ["S", "M", "L", "XL"],
-    "color":["Marron", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Vestido unicolorde falda corta tela ligera, con detalle floral al frente. ",      
-    "stock": 29,
-    "images": {
-    "model": "/vestidos/vestido1 -1.jpg",
-    "front": "/vestidos/vestido1 -2.jpg",
-    "back": "/vestidos/vestido1 -3.jpg"
-}
-},
-{
     "id": 42,
     "name": "Vestido Corto Elegante",
     "category": "Vestidos",

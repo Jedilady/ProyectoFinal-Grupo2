@@ -59,7 +59,7 @@ const LoginForm = () => {
   return (
     <div className="layout-container">
       <div className="container">
-        <h2 className="title">Iniciar Sesión</h2>
+        <h2 className="title">INICIAR SESIÓN</h2>
         <p className="subtitle">
           Introduce tu correo y contraseña para acceder
         </p>
@@ -100,7 +100,7 @@ const LoginForm = () => {
           </p>
 
           <button type="submit" className="button">
-            Iniciar sesión
+            INICIAR SESIÓN
           </button>
         </form>
       </div>
@@ -116,7 +116,7 @@ const LoginForm = () => {
           alta.
         </p>
         <Link to="/register">
-          <button className="button">Crear usuario</button>
+          <button className="button-second">CREAR USUARIO</button>
         </Link>
       </div>
     </div>

@@ -8,7 +8,7 @@ function ProductsPage() {
   const { novedades } = useParams();
 
   return (
-    <div>
+    <div className="products-page">
       <h1>{category ? category : (novedades ? novedades : "Nuestros productos")}</h1>
       { novedades ? 
         (<ProductsFiltered category={"novedades"}/>) :

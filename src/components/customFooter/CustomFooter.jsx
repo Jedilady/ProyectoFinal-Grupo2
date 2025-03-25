@@ -1,11 +1,14 @@
 import React from "react";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
-import "../styles/Footer.css"; 
+import "./CustomFooter.css"; 
+
+
 
 const CustomFooter = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">  
+      <div className="footer-container"> 
+         
         {/* Sección de Empresa */}
         <div className="footer-section">
           <h3>Empresa</h3>  

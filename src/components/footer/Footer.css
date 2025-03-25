@@ -1,4 +1,4 @@
-.footer {
+/*.footer {
   background-color: #b987cc;
   color: white;
   padding: 20px;
@@ -24,4 +24,6 @@
   border-radius: 5px;
   transition: background-color 0.3s;
   text-decoration: none;
-}
+}*/ 
+
+/* "OJO" UNIFIQUE TODOS LOS ESTILOS CSS DE LOS DOS FOOTER EN "CUSTOMFOOTER.CSS (LEIDY) */

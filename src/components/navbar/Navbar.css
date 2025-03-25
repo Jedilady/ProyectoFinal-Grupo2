@@ -1,21 +1,22 @@
 /* Estilo básico para la navbar */
 .navbar {
-  background-color: #b987cc;
   padding: 10px;
 }
 
 .nav-link {
-  color: white;
-  text-decoration: none;
   font-size: 18px;
 }
 
 .nav-button {
-  background-color: #ee9db8;
-  color: white;
+  background-color: transparent;
   border: none;
+  color: var(--main-color);
   padding: 8px 16px;
-  font-size: 16px;
   cursor: pointer;
-  border-radius: 4px;
+}
+
+.nav-logo {
+  font-family: var(--logo-font);
+  font-weight: 300;
+  font-size: 2rem;
 }

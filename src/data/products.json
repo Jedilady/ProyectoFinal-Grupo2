@@ -2,12 +2,12 @@
 [
     {
     "id": 1,
-    "name": "Blusa a rayas",
+    "name": "Blusa a Rayas",
     "category": "Blusas",
     "price": 19.80,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Blanco con rayas Negras", "Blanca con rayas azul", "Blanca con rayas rojas"],
-    "descripcion":"Blusa de algodon, de manga larga",
+    "descripcion":"Blusa de algodon de manga larga.",
     "stock": 50,
     "images": {
     "model": "/camisas/camisa1 -1.jpg", 
@@ -17,12 +17,12 @@
 },
 {
     "id": 2,
-    "name": "Blusa de lana",
+    "name": "Blusa de Lana",
     "category": "Blusas",
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosa", "Blanco", "Azul", "Rojo"],
-    "descripcion":"Blusa de Lana, con dtalle en la parte frontal ideal para invierno",
+    "descripcion":"Blusa de Lana, con detalle en la parte frontal ideal para invierno.",
     "stock": 30,
     "images": {
     "model": "/camisas/camisa2 -1.jpg",
@@ -32,12 +32,12 @@
 },
 {
     "id": 3,
-    "name": "Blusa de lazo",
+    "name": "Blusa de Lazo",
     "category": "Blusas",
     "price": 12.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Amarillo", "Blanco", "Azul,Negro "],
-    "descripcion":"Blusa de seda con detalle de cinta al cuello",
+    "descripcion":"Blusa de seda con detalle de cinta al cuello.",
     "stock": 28,
     "images": {
     "model": "/camisas/camisa3 -1.jpg",
@@ -52,7 +52,7 @@
     "price": 25.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Azul oscuro", "Azul Claro"],
-    "descripcion":"Blusa vaquera entera con pantalon incorparado",
+    "descripcion":"Blusa vaquera entera con pantalon incorparado.",
     "stock": 30,
     "images": {
     "model": "/camisas/camisa4 -1.jpg",
@@ -67,7 +67,7 @@
     "price": 14.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Blanco", "Negro", "Azul oscuro", "Azul Claro"],
-    "descripcion":"Blusa de mangas corta con dos bolsillos ",
+    "descripcion":"Blusa de mangas corta con dos bolsillos. ",
     "stock": 17,
     "images": {
     "model": "/camisas/camisa5 -1.jpg",
@@ -82,7 +82,7 @@
     "price": 16.70,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Negro y gris", "Azul oscuro y beige", "Negro y rojo"],
-    "descripcion":"Blusa estampada de flores grandes en dos colores",
+    "descripcion":"Blusa estampada de flores grandes en dos colores.",
     "stock": 20,
     "images": {
     "model": "/camisas/camisa6 -1.jpg",
@@ -92,12 +92,12 @@
 },
 {
     "id": 7,
-    "name": "Blusa manga tres cuarto",
+    "name": "Blusa Manga Tres Cuarto",
     "category": "Blusas",
     "price": 9.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo","Azul","Blanco"],
-    "descripcion":"Blusa manga tres cuartos con cinta de ajuste a la cintura",
+    "descripcion":"Blusa manga tres cuartos con cinta de ajuste a la cintura.",
     "stock": 15,
     "images": {
     "model": "/camisas/camisa7 -1.jpg",
@@ -112,7 +112,7 @@
     "price": 24.60,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Beige", "Azul rey"," Blanco"],
-    "descripcion":"Blusa de seda con mangas largas",
+    "descripcion":"Blusa de seda con mangas largas.",
     "stock": 28,
     "images": {
     "model": "/camisas/camisa8 -1.jpg",
@@ -127,7 +127,7 @@
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Azul oscuro", "Azul Claro"],
-    "descripcion":"Blusa vaquera de mangas anchas",
+    "descripcion":"Blusa vaquera de mangas anchas.",
     "stock": 30,
     "images": {
     "model": "/camisas/camisa9 -1.jpg",
@@ -142,7 +142,7 @@
     "price": 5.90,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosada", "Azul" , "Amarillo"],
-    "descripcion":"Blusa a cuadros pequeños de cuello ancho",
+    "descripcion":"Blusa a cuadros pequeños de cuello ancho.",
     "stock": 20,
     "images": {
     "model": "/camisas/camisa10 -1.jpg",
@@ -157,7 +157,7 @@
     "price": 13.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Azul oscuro y Azul", "Claro, Rosa y azul", "Rojo y gris "],
-    "descripcion":"Blusa estampada de flores mediana en do colores",
+    "descripcion":"Blusa estampada de flores mediana en dos colores.",
     "stock": 22,
     "images": {
     "model": "/camisas/camisa11 -1.jpg",
@@ -172,7 +172,7 @@
     "price": 16.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Azul", "Blnaco", "Negro"],
-    "descripcion":"Blusa de estampados retro",
+    "descripcion":"Blusa de estampados retro.",
     "stock": 15,
     "images": {
     "model": "/camisas/camisa1 -1.jpg",
@@ -182,12 +182,12 @@
 },
 {
     "id": 13,
-    "name": "Blusa Coctekl",
+    "name": "Blusa Coctel",
     "category": "Blusas",
     "price": 28.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosa", "Azul oscuro", "Azul Claro", "Negro", "Blanco"],
-    "descripcion":"Blusa de seda con drapeado en lado derecho",
+    "descripcion":"Blusa de seda con drapeado en lado derecho.",
     "stock": 30,
     "images": {
     "model": "/camisas/camisa13 1.jpg",
@@ -202,7 +202,7 @@
     "price": 22.30,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Negro", "Azul oscuro", "Rojo "],
-    "descripcion":"Blusa de algodon estampada con lunares  ",
+    "descripcion":"Blusa de algodon estampada con lunares.",
     "stock": 28,
     "images": {
     "model": "/camisas/camisa14 -1.jpg",
@@ -217,7 +217,7 @@
     "price": 19.30,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Marron", "Negro", "Azul", "Rojo "],
-    "descripcion":"Blusa de seda con puños anchos",
+    "descripcion":"Blusa de seda con puños anchos.",
     "stock": 15,
     "images":{
     "model": "/camisas/camisa15 -1.jpg",
@@ -232,7 +232,7 @@
     "price": 12.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Blanco", "Negro", "Azul", "Rojo "],
-    "descripcion":"Blusa manga laraga lisa  ",
+    "descripcion":"Blusa manga larga lisa. ",
     "stock": 38,
     "images": {
     "model": "/camisas/camisa16 -1.jpg",
@@ -247,7 +247,7 @@
     "price": 19.30,
     "sizes":["S", "M", "L", "XL"],
     "color":["Negro", "Azul", "Rojo "],
-    "descripcion":"Blusa fresca manga larga",
+    "descripcion":"Blusa fresca manga larga.",
     "stock": 15,
     "images": {
     "model": "/camisas/camisa17 -1.jpg",
@@ -262,7 +262,7 @@
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Negro", "Azul", "Rojo", "Blanco"],
-    "descripcion":"Blusa ancha de algodon",
+    "descripcion":"Blusa ancha de algodon.",
     "stock": 18,
     "images": {
     "model": "/camisas/camisa14 -1.jpg",
@@ -272,12 +272,12 @@
 },
 {
     "id": 19,
-    "name": "Blusa Frncida",
+    "name": "Blusa Fruncida",
     "category": "Blusas",
     "price": 20.30,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Negro", "Azul", "Rosa"],
-    "descripcion":"Blusa de algodon estampada ",
+    "descripcion":"Blusa de algodon estampada. ",
     "stock": 28,
     "images": {
     "model": "/camisas/camisa19 -1.jpg",
@@ -292,7 +292,7 @@
     "price": 18.80,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Blanco", "Negro", "Azul", "Rojo "],
-    "descripcion":"Blusa fresca de algodon sin mangas ideal para el verano",
+    "descripcion":"Blusa fresca de algodon sin mangas ideal para el verano.",
     "stock": 38,
     "images": {
     "model": "/camisas/camisa20 -1.jpg",
@@ -302,12 +302,12 @@
 },
 {
     "id": 21,
-    "name": "Pantalon",
+    "name": "Pantalon Bolsillo",
     "category": "Pantalones",
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Blanco", "Negro", "Azul", "Rojo "],
-    "descripcion":"Pantalon casual",
+    "descripcion":"Pantalon casual con doble bolsillo trasero.",
     "stock": 26,
     "images": {
     "model": "/pantalones/pantalon1 -1.jpg",
@@ -317,12 +317,12 @@
 },
 {
     "id": 22,
-    "name": "Pantalon",
+    "name": "Pantalon Chándal",
     "category": "Pantalones",
     "price": 10.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon casual de verano",
+    "descripcion":"Chándal de verano.",
     "stock": 26,
     "images": {
     "model": "/pantalones/pantalon2 -1.jpg",
@@ -332,12 +332,12 @@
 },
 {
 "id": 23,
-    "name": "Pantalon",
+    "name": "Pantalon de Piel",
     "category": "Pantalones",
     "price": 13.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Negro", "Rojo", "Blanco", "Azul,"],
-    "descripcion":"Pantalon piel sintetica",
+    "descripcion":"Pantalon piel sintetica.",
     "stock": 20,
     "images": {
     "model": "/pantalones/pantalon3 -1.jpg",
@@ -347,12 +347,12 @@
 },
 {
 "id": 24,
-    "name": "Pantalon",
+    "name": "Pantalon de Seda",
     "category": "Pantalones",
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon fresco de verano",
+    "descripcion":"Pantalon fresco de verano con blusa incorparada con una sola manga.",
     "stock": 29,
     "images": {
     "model": "/pantalones/pantalon4 -1.jpg",
@@ -362,12 +362,12 @@
 },
 {
     "id": 25,
-    "name": "Pantalon",
+    "name": "Pantalon de Lino",
     "category": "Pantalones",
     "price": 9.00,   
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon clasico",
+    "descripcion":"Pantalon clasico, de lino. ",
     "stock": 20,
     "images": {
     "model": "/pantalones/pantalon5 -1.jpg",
@@ -377,12 +377,12 @@
 },
 {
     "id": 26,
-    "name": "Pantalon",
+    "name": "Pantalon Recto ",
     "category": "Pantalones",
     "price": 8.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones de Corte Slim",      
+    "descripcion":"Pantalones recto de Corte Slim.",      
     "stock": 19,
     "images": {
     "model": "/pantalones/pantalon6 -1.jpg",
@@ -392,12 +392,12 @@
 },
 {
     "id": 27,
-    "name": "Pantalon",
+    "name": "Pantalon Wide Leg",
     "category": "Pantalones",
     "price": 9.80,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones Cargo, para un estilo casual y práctico:",      
+    "descripcion":"Pantalones largo y amplio, para un estilo casual y práctico.",      
     "stock": 19,
     "images": {
     "model": "/pantalones/pantalon7 -1.jpg",
@@ -407,12 +407,12 @@
     },
 {
     "id": 28,
-    "name": "Pantalon",
+    "name": "Pantalon Palazzo",
     "category": "Pantalones",
     "price": 9.80,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones Cargo, Con estos pantalones cargo, la funcionalidad se encuentra con el estilo",      
+    "descripcion":"Pantalones largo. Muy anchos y fluidos, con el estilo.",      
     "stock": 39,
     "images": {
     "model": "/pantalones/pantalon8 -1.jpg",
@@ -422,12 +422,12 @@
     },
 {
     "id": 29,
-    "name": "Pantalon",
+    "name": "Pantalon Recto Clasico ",
     "category": "Pantalones",
     "price": 10.50,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones Clásicos on ideales para un look profesional y elegante.",      
+    "descripcion":"Pantalones Clásicos son ideales para un look profesional y elegante.",      
     "stock": 50,
     "images": {
     "model": "/pantalones/pantalon9 -1.jpg",
@@ -437,12 +437,12 @@
     },
 {
     "id": 30,
-    "name": "Pantalon",
+    "name": "Pantalon Ancho",
     "category": "Pantalones",
     "price": 12.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones de Corte Slim Consigue un look moderno con estos pantalones de corte slim.",      
+    "descripcion":"Pantalones de Corte Slim. Consigue un look moderno con estos pantalones de corte slim.",      
     "stock": 20,
     "images": {
     "model": "/pantalones/pantalon10 -1.jpg",
@@ -452,12 +452,12 @@
     },
 {
     "id": 31,
-    "name": "Pantalon",
+    "name": "Pantalon Boyfriend",
     "category": "Pantalones",
     "price": 14.80,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones Cargo on perfectos para un día de aventuras o para un look relajado pero práctico. ",      
+    "descripcion":"Holgados y de corte masculino, para un estilo informal y relajado. ",      
     "stock": 40,
     "images": {
     "model": "/pantalones/pantalon11 -1.jpg",
@@ -467,12 +467,12 @@
 },
 {
     "id": 32,
-    "name": "Pantalon",
+    "name": "Pantalon Chino",
     "category": "Pantalones",
     "price": 24.80,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalones de Lino, Disfruta de la frescura y ligereza del lino con estos pantalones. ",      
+    "descripcion":"De tela ligera y corte recto, perfectos para un estilo casual elegante. ",      
     "stock": 40,
     "images": {
     "model": "/pantalones/pantalon12 -1.jpg",
@@ -482,12 +482,12 @@
 },
 {
     "id": 33,
-    "name": "Pantalon",
+    "name": "Pantalon Conjunto de Blazer ",
     "category": "Pantalones",
     "price": 21.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosado", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon ligerode, Disfruta de la frescura y ligereza  con estos pantalones. ",      
+    "descripcion":"Pantalon elegante y sofisticado acompañado de Blazer. ",      
     "stock": 39,
     "images": {
     "model": "/pantalones/pantalon13 -1.jpg",
@@ -497,12 +497,12 @@
 },
 {
     "id": 34,
-    "name": "Pantalon a rayas",
+    "name": "Pantalon a Rayas",
     "category": "Pantalones",
     "price": 21.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon a rayas. Disfruta de la comodidad  con estos pantalones. ",      
+    "descripcion":"Pantalon a rayas. Disfruta de la comodidad  con estos pantalones.",      
     "stock": 29,
     "images": {
     "model": "/pantalones/pantalon14 -1.jpg",
@@ -511,8 +511,8 @@
 }
 },
 {  
-    "id":10,
-    "name": "Pantalon",
+    "id":35,
+    "name": "Pantalon Tiro Bajo",
     "category": "Pantalones",
     "price": 11.00,
     "sizes": ["S", "M", "L", "XL"],
@@ -527,12 +527,12 @@
 },
 {
     "id": 36,
-    "name": "Pantalon",
+    "name": "Pantalon Tiro Medio",
     "category": "Pantalones",
     "price": 12.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosado", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon chandal fresco y ligero. ",      
+    "descripcion":"Pantalon fresco y ligero. ",      
     "stock": 43,
     "images": {
     "model": "/pantalones/pantalon16 -1.jpg",
@@ -542,12 +542,12 @@
 },
 {
     "id": 37,
-    "name": "Pantalon",
+    "name": "Pantalon Ancho Estampado",
     "category": "Pantalones",
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosado", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon fresco y estampado. Disfruta de la frescura y ligereza  con estos pantalones en verano. ",      
+    "descripcion":"Holgados y cómodos, con perneras anchas que caen rectas desde la cadera, perfectos para un estilo relajado o elegante. ",      
     "stock":29,
     "images": {
     "model": "/pantalones/pantalon17 -1.jpg",
@@ -557,12 +557,12 @@
 },
 {
     "id": 38,
-    "name": "Pantalon",
+    "name": "Pantalon Ancho a Cuadros",
     "category": "Pantalones",
     "price": 20.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosado", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon elegante y comodo con estampado retro",
+    "descripcion":"Pantalon elegante y comodo con estampado retro.",
     "images": {
     "model": "/pantalones/pantalon18 -1.jpg",
     "front": "/pantalones/pantalon18 -2.jpg",
@@ -571,12 +571,12 @@
 },
 {
     "id": 39,
-    "name": "Pantalon",
+    "name": "Pantalon Palazzo Tiro Alto",
     "category": "Pantalones",
     "price": 20.10,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Rosado", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Pantalon retro de figuras geometrica grandes",      
+    "descripcion":"Pantalon retro de figuras geometrica grandes.",      
     "stock": 27,
     "images": {
     "model": "/pantalones/pantalon19 -1.jpg",
@@ -586,7 +586,7 @@
 },
 {
     "id": 40,
-    "name": "Pantalon",
+    "name": "Pantalon Flores Retro ",
     "category": "Pantalones",
     "price": 27.00,
     "sizes": ["S", "M", "L", "XL"],
@@ -601,27 +601,12 @@
 },
 {
     "id": 41,
-    "name": "Vestido corto",
+    "name": "Vestido Corto ",
     "category": "Vestidos",
     "price": 21.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Marron", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Vestido largo. ",      
-    "stock": 29,
-    "images": {
-    "model": "/vestidos/vestido1 -1.jpg",
-    "front": "/vestidos/vestido1 -2.jpg",
-    "back": "/vestidos/vestido1 -3.jpg"
-}
-},
-{
-    "id": 41,
-    "name": "Vestido corto",
-    "category": "Vestidos",
-    "price": 21.00,
-    "sizes": ["S", "M", "L", "XL"],
-    "color":["Marron", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Vestido unicolor. ",      
+    "descripcion":"Vestido corto de cuello alto. ",      
     "stock": 29,
     "images": {
     "model": "/vestidos/vestido1 -1.jpg",
@@ -631,12 +616,12 @@
 },
 {
     "id": 42,
-    "name": "Vestido corto",
+    "name": "Vestido Corto Elegante",
     "category": "Vestidos",
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Marron", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Vestido corto con detalle floral al frente. ",      
+    "descripcion":"Vestido corto elegante de lino. ",      
     "stock": 29,
     "images": {
     "model": "/vestidos/vestido2 -1.jpg",
@@ -646,12 +631,12 @@
     },
 {
     "id":43,
-    "name": "Vestido corto",
+    "name": "Vestido Corto Ligero",
     "category": "Vestidos",
     "price": 15.90,
     "sizes": ["S", "M", "L", "XL"],
     "color":["Marron", "Rojo", "Blanco", "Negro", "Azul,"],
-    "descripcion":"Vestido corto casula y comodo.  ",      
+    "descripcion":"Vestido corto casual de tela ligera y comodo.  ",      
     "stock": 25,
     "images": {
     "model": "/vestidos/vestido3 -1.jpg",
@@ -661,12 +646,12 @@
     },
     {
         "id": 44,
-        "name": "Vestido corto",
+        "name": "Vestido Corto Rayon",
         "category": "Vestidos",
         "price": 12.90,
         "sizes": ["S", "M", "L", "XL"],
         "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-        "descripcion":"Vestido corto retro.  ",      
+        "descripcion":"Vestido corto estampado.  ",      
         "stock": 25,
         "images": {
         "model": "/vestidos/vestido4 -1.jpg",
@@ -676,12 +661,12 @@
         },
     {
         "id": 45,
-        "name": "Vestido corto",
+        "name": "Vestido Mini",
         "category": "Vestidos",
         "price": 15.60,
         "sizes": ["S", "M", "L", "XL"],
         "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-        "descripcion":"Vestido corto retro de cuello alto.  ",      
+        "descripcion":"Vestido mini retro de cuello alto.  ",      
         "stock": 25,
         "images": {
         "model": "/vestidos/vestido5 -1.jpg",
@@ -691,12 +676,12 @@
         },
         {
             "id": 46,
-            "name": "Vestido corto",
+            "name": "Vestido Vaquro Estraple",
             "category": "Vestidos",
             "price": 16.00,
             "sizes": ["S", "M", "L", "XL"],
             "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-            "descripcion":"Vestido corto tejano.",  
+            "descripcion":"Vestido corto tejano, de corte estraple.",  
             "stock": 19,
             "images": {
             "model": "/vestidos/vestido6 -1.jpg",
@@ -706,12 +691,12 @@
             },
             {
             "id": 47,
-            "name": "Vestido corto",
+            "name": "Vestido Mini Cuello Alto",
             "category": "Vestidos",
             "price": 11.90,
             "sizes": ["S", "M", "L", "XL"],
             "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-            "descripcion":"Vestido mini falda.  ",      
+            "descripcion":"Vestido mini falda con cuello alto.  ",      
             "stock": 25,
             "images": {
             "model": "/vestidos/vestido7 -1.jpg",
@@ -721,12 +706,12 @@
             },
             {
                 "id": 48,
-                "name": "Vestido corto",
+                "name": "Vestido Corto de Jean",
                 "category": "Vestidos",
                 "price": 15.90,
                 "sizes": ["S", "M", "L", "XL"],
                 "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                "descripcion":"Vestido corto tela de pana mahga larga.  ",      
+                "descripcion":"Vestido corto de jean con mangas larga.",      
                 "stock": 25,
                 "images": {
                 "model": "/vestidos/vestido8 -1.jpg",
@@ -736,12 +721,12 @@
                 },
                 {
                 "id": 49,
-                "name": "Vestido",
+                "name": "Vestido Midi",
                 "category": "Vestidos",
                 "price": 17.00,
                 "sizes": ["S", "M", "L", "XL"],
                 "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                "descripcion":"Vestido largo cocktel.  ",      
+                "descripcion":"Vestido Comodo y versatil, puede ser utilizado para eventos casuales o de trabajo.  ",      
                 "stock": 32,
                 "images": {
                 "model": "/vestidos/vestido9 -1.jpg",
@@ -750,8 +735,8 @@
                 }
                 },
     {
-    "id": 50,
-        "name": "Vestido ",
+        "id": 50,
+        "name": "Vestido Midi Estraple",
         "category": "Vestidos",
         "price": 15.00,
         "sizes": ["S", "M", "L", "XL"],
@@ -766,12 +751,12 @@
     },
     {
         "id": 51,
-        "name": "Vestido ",
+        "name": "Vestido Vaquero",
         "category": "Vestidos",
         "price": 25.00,
         "sizes": ["S", "M", "L", "XL"],
         "color":[" Azul Oscuro", "Azul claro,"],
-        "descripcion":"Vestido vaquero de manga larga. ",      
+        "descripcion":"Vestido vaquero de manga larga.",      
         "stock": 30,
         "images": {
         "model": "/vestidos/vestido11 -1.jpg",
@@ -781,12 +766,12 @@
         },
         {
         "id": 52,
-        "name": "Vestido ",
+        "name": "Vestido Maxi",
         "category": "Vestidos",
         "price": 18.00,
         "sizes": ["S", "M", "L", "XL"],
         "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-        "descripcion":"Vestido cocktel de maga larga. ",      
+        "descripcion":"Vestido ideal para eventos formales, bodas, fiestas de noche o para un estilo bohemio.",      
         "stock": 20,
         "images": {
         "model": "/vestidos/vestido12 -1.jpg",
@@ -796,12 +781,12 @@
         },
         {
             "id": 53,
-            "name": "Vestido ",
+            "name": "Vestido Recto",
             "category": "Vestidos",
             "price": 12.00,
             "sizes": ["S", "M", "L", "XL"],
             "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-            "descripcion":"Vestido recto de tirantes. ",      
+            "descripcion":"Vestido recto de tirantes, su longitud llega hasta los tobillos o el suelo.",      
             "stock": 15,
             "images": {
             "model": "/vestidos/vestido13 -1.jpg",
@@ -811,12 +796,12 @@
             },
             {
             "id": 54,
-            "name": "Vestido ",
+            "name": "Vestido Midi Mezclilla",
             "category": "Vestidos",
             "price": 15.00,
             "sizes": ["S", "M", "L", "XL"],
             "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-            "descripcion":"Vestido de mezclilla manga corta. ",      
+            "descripcion":"Vestido de mezclilla manga corta.Su largo llega hasta la mitad de la pantorrilla, ofreciendo un equilibrio entre elegancia y comodidad.",      
             "stock": 30,
             "images": {
             "model": "/vestidos/vestido14 -1.jpg",
@@ -826,7 +811,7 @@
             },
             {
                 "id": 55,
-                "name": "Vestido ",
+                "name": "Vestido Maxi Tiras",
                 "category": "Vestidos",
                 "price": 13.80,
                 "sizes": ["S", "M", "L", "XL"],
@@ -841,12 +826,12 @@
                 },
                 {
                 "id": 56,
-                "name": "Vestido ",
+                "name": "Vestido Midi Semi-Formal",
                 "category": "Vestidos",
                 "price": 16.00,
                 "sizes": ["S", "M", "L", "XL"],
                 "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                "descripcion":"Vestido sin mangas. ",      
+                "descripcion":"Adecuado para eventos semiformales, reuniones de trabajo o salidas de día sin mangas. ",      
                 "stock": 10,
                 "images": {
                 "model": "/vestidos/vestido16 -1.jpg",
@@ -856,12 +841,12 @@
                 },
             {
                     "id": 57,
-                    "name": "Vestido ",
+                    "name": "Vestido Maxi Retro",
                     "category": "Vestidos",
                     "price": 19.00,
                     "sizes": ["S", "M", "L", "XL"],
                     "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                    "descripcion":"Vestido retro de cuadros grandes. ",      
+                    "descripcion":"Vestido retro de cuadros grandes, ideal para eventos formales, bodas, fiestas de noche o para un estilo bohemio.",      
                     "stock": 30,
                     "images": {
                     "model": "/vestidos/vestido17 -1.jpg",
@@ -871,12 +856,12 @@
                     },
                     {
                     "id": 58,
-                    "name": "Vestido ",
+                    "name": "Vestido Coctel",
                     "category":"Vestidos",
                     "price": 15.00,
                     "sizes": ["S", "M", "L", "XL"],
                     "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                    "descripcion":"Vestido largo para cocktel sin mangas. ",      
+                    "descripcion":"Vestido largo para coctel sin mangas.",      
                     "stock": 30,
                     "images": {
                     "model": "/vestidos/vestido18 -1.jpg",
@@ -886,12 +871,12 @@
                     },
                     {
                         "id": 59,
-                        "name": "Vestido ",
+                        "name": "Vestido Maxi Plieges",
                         "category": "Vestidos",
                         "price": 25.00,
                         "sizes": ["S", "M", "L", "XL"],
                         "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                        "descripcion":"Vestido cocktel sin mangas con falda de plice. ",      
+                        "descripcion":"Vestido coctel sin mangas con falda de plieges.",      
                         "stock": 30,
                         "images": {
                         "model": "/vestidos/vestido19 -1.jpg",
@@ -901,12 +886,12 @@
                         },
                         {
                         "id": 60,
-                        "name": "Vestido ",
+                        "name": "Vestido Evase",
                         "category": "Vestidos",
                         "price": 21.00,
                         "sizes": ["S", "M", "L", "XL"],
                         "color":[" Rojo", "Blanco", "Negro", "Azul,"],
-                        "descripcion":"Vestido cocktel sin masngas con avertura en la cintura ",      
+                        "descripcion":"Vestido coctel sin mangas con avertura en la cintura.",      
                         "stock": 30,
                         "images": {
                         "model": "/vestidos/vestido20 -1.jpg",

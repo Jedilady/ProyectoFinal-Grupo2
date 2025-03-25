@@ -13,11 +13,10 @@ import {
   ProfilePage,
 } from './pages';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
+import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
 import { UserProvider } from './context/UserContext';
-
-import './css/App.css';
+import './App.css';
 
 function App() {
   return (
@@ -30,6 +29,8 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:category" element={<ProductsPage />} />
+            <Route path="/products/:novedades" element={<ProductsPage />} />
             <Route path="/Product/:productId" element={<ProductIdPage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/cart" element={<CartPage />} />
@@ -38,7 +39,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
-          <Footer />
+          <CustomFooter />
         </AllProductsProvider>
       </UserProvider>
     </>

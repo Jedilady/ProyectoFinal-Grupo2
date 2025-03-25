@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="nav-link">
-        <h3>Nua </h3>
+        <span className='nav-logo'>Nua</span>
       </Link>
 
       {user ? (

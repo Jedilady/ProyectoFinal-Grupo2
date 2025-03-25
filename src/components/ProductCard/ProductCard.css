@@ -1,0 +1,51 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .product-card-img {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+}
+
+/* NOTA de JUVILI: 
+TO DO:
+Todo lo comentado es parte de una idea para darle transición a las imágenes, para hacer luego, si da tiempo
+*/
+
+/* .product-card .product-card-img .product-card-img-alt,
+.product-card .product-card-img:hover .product-card-img-main {
+    transition: visibility 0s, opacity 0.5s linear;
+} */
+
+.product-card .product-card-img .product-card-img-alt {
+    /* visibility: hidden;
+    opacity: 0; */
+    display: none;
+}
+
+.product-card .product-card-img:hover .product-card-img-main {
+    /* visibility: hidden;
+    opacity: 0; */
+    display: none;
+}
+.product-card .product-card-img:hover .product-card-img-alt {
+    /* visibility: visible;
+    opacity: 1; */
+    display: block;
+}
+
+.product-card .product-card-name {
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.product-card .product-card-name,
+.product-card .product-card-price {
+    margin-left: 1rem;
+}
+
+.product-card:hover .product-card-name {
+    color: var(--green);
+}

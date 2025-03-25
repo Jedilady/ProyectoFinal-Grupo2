@@ -1,0 +1,133 @@
+.footer {
+    color: rgba(255, 255, 255, 0.355);
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid var(--main-color);
+    gap: 1rem;
+  }
+  
+  .footer-social-icons {
+    grid-area: 1 / 1 / 1 / 1;
+    grid-column: 1 / 1;
+  }
+
+  @media screen and (min-width: 413px) {
+      .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-social-icons {
+        grid-area: 1 / 1 / 3 / 1;
+        grid-column: 4 / 1;
+      }
+  }
+  @media screen and (min-width: 780px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center
+      }
+      .footer-social-icons {
+        grid-area: auto;
+        grid-column: auto / 5;
+      }
+  }
+  
+  .footer-section {
+    margin-top: 1rem;
+    text-align: left;
+    padding: 0;
+    position: relative;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: rgba(128, 128, 128, 0.992);
+    font-weight: 400;
+  }
+
+  .footer-nav {
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start;
+      gap: 0.5rem;
+       
+    }
+  }
+
+  
+  .footer-section p, 
+  .footer-section a {
+    color: var(--main-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    list-style: none;
+     
+  }
+  
+  .footer-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-color);
+  }
+  
+  .footer-section a:hover,
+  .footer-button:hover
+   {
+    color: var(--green);
+
+  }
+  
+  /* Redes Sociales */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  
+  .icon {
+    font-size: 25px;
+    color: rgb(145, 144, 144);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .icon.linkedin:hover {
+    color: #90d2f5;
+  }
+  
+  .icon.facebook:hover {
+    color: #90d2f5;
+  }
+  
+  .icon.instagram:hover {
+    color: #fab4c1;
+  }
+  
+  .icon.youtube:hover {
+    color: #fab4c1;
+  }
+  
+  .icon.twitter:hover {
+    color: #90d2f5;
+  }
+  
+  /* Derechos Reservados */
+  .copyright {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--main-color)
+  }

@@ -14,6 +14,7 @@ import {
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { AllProductsProvider } from './context/ProductsContext';
+/*import Footer from './components/footer/CustomFooter';*/
 
 import "./App.css";
 

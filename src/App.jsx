@@ -12,7 +12,6 @@ import {
   PaymentPage,
 } from './pages';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
 import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
 import "./App.css";
@@ -36,7 +35,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-        <Footer />
         <CustomFooter />
       </AllProductsProvider>
     </>

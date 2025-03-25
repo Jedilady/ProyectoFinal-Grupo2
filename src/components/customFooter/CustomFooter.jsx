@@ -1,8 +1,6 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import "./CustomFooter.css"; 
-
-
 
 const CustomFooter = () => {
   return (
@@ -14,9 +12,46 @@ const CustomFooter = () => {
           <h3>Empresa</h3>  
           <nav className="footer-nav">
             <ul className="nav-list">
-              <li><a href="#">Tiendas</a></li>
-              <li><a href="#">Trabaja con Nosotros</a></li>
-              <li><a href="#">Política de cookies</a></li>
+              <li>
+                <Link to="/about">
+                    <button className="footer-button">Nosotros</button>
+                  </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <button className="footer-button">Contacto</button>
+                </Link>
+              </li>
+              <li>
+                <a href="#">Tiendas</a>
+              </li>
+              <li>
+                <a href="#">Política de cookies</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        {/* Sección de Productos */}
+        <div className="footer-section">
+          <h3>Productos</h3>  
+          <nav className="footer-nav">
+            <ul className="nav-list">
+              <li>
+                <Link to="/products/Blusas">
+                    <button className="footer-button">Blusas</button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/Pantalones">
+                  <button className="footer-button">Pantalones</button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/Vestidos">
+                  <button className="footer-button">Vestidos</button>
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -29,7 +64,7 @@ const CustomFooter = () => {
         </div>  
 
         {/* Sección de Redes Sociales */}
-        <div className="footer-section">
+        <div className="footer-section footer-social-icons">
           <h3>Síguenos</h3>
           <div className="social-icons">
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="icon linkedin"/> </a>
@@ -48,6 +83,3 @@ const CustomFooter = () => {
 };
 
 export default CustomFooter;
-
-
-  

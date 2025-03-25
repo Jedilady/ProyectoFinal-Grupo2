@@ -13,9 +13,8 @@ import {
 } from './pages';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
-/*import Footer from './components/footer/CustomFooter';*/
-
 import "./App.css";
 
 function App() {
@@ -36,6 +35,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
+        <CustomFooter />
       </AllProductsProvider>
     </>
   );

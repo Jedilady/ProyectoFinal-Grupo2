@@ -1,39 +1,35 @@
 import { useState, useContext } from 'react';
-import './RegisterForm.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
+import './Profile.css'; //  estilos para el perfil
 
-const RegisterForm = () => {
-  const [email, setEmail] = useState('');
+const Profile = () => {
+  const { user, updateUser } = useContext(UserContext);
+  const [email, setEmail] = useState(user?.email || '');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
-  const [registrationError, setRegistrationError] = useState('');
-  const { updateUser } = useContext(UserContext);
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (validateForm()) {
-      const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-      if (storedUsers.some((user) => user.email === email)) {
-        setRegistrationError('Este correo electrónico ya está registrado.');
-      } else {
-        const newUser = { email, password, role: 'user' };
+      const updatedUser = {
+        ...user,
+        email,
+        password,
+      };
 
-        storedUsers.push(newUser);
-        localStorage.setItem('users', JSON.stringify(storedUsers));
+      console.log('Usuario actualizado:', updatedUser);
 
-        updateUser(newUser);
-
-        console.log('Usuario registrado exitosamente:', email);
-
-        // redirigmos
-        navigate('/home');
-      }
+      localStorage.setItem('user', JSON.stringify(updateUser));
+      updateUser(updatedUser); // actualizar en el contexto,
+      console.log('Datos del perfil actualizados:', updatedUser);
+      navigate('/'); // redirigimos
     }
   };
 
@@ -47,7 +43,7 @@ const RegisterForm = () => {
       setEmailError('');
     }
 
-    if (!password || password.length < 6) {
+    if (password && password.length < 6) {
       setPasswordError('La contraseña debe tener al menos 6 caracteres.');
       valid = false;
     } else {
@@ -67,10 +63,7 @@ const RegisterForm = () => {
   return (
     <div className="layout-container">
       <div className="container">
-        <h2 className="title">REGISTRO DE USUARIO</h2>
-        <p className="subtitle">
-          Introduce los siguientes datos para registrarte
-        </p>
+        <h2 className="title">Perfil de Usuario</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-container">
             <input
@@ -80,7 +73,7 @@ const RegisterForm = () => {
               className="input"
             />
             <label htmlFor="email" className="label">
-              e-mail
+              Correo Electrónico
             </label>
             {emailError && <p className="error">{emailError}</p>}
           </div>
@@ -93,7 +86,7 @@ const RegisterForm = () => {
               className="input"
             />
             <label htmlFor="password" className="label">
-              Contraseña
+              Nueva Contraseña
             </label>
             {passwordError && <p className="error">{passwordError}</p>}
           </div>
@@ -105,29 +98,21 @@ const RegisterForm = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               className="input"
             />
-            <label htmlFor="password" className="label">
-              Repetir Contraseña
+            <label htmlFor="confirmPassword" className="label">
+              Confirmar Nueva Contraseña
             </label>
             {confirmPasswordError && (
               <p className="error">{confirmPasswordError}</p>
             )}
           </div>
 
-          {registrationError && <p className="error">{registrationError}</p>}
-
           <button type="submit" className="button">
-            REGISTRARTE
+            Actualizar Perfil
           </button>
         </form>
-      </div>
-      <div className="container container-cuenta">
-        <p className="login-link">¿Ya tienes cuenta? Accede aquí:</p>
-        <Link to="/login">
-          <button className="button-second">IR A INICIO DE SESIÓN</button>
-        </Link>
       </div>
     </div>
   );
 };
 
-export default RegisterForm;
+export default Profile;

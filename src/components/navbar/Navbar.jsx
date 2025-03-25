@@ -1,16 +1,29 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import UserContext from '../../context/UserContext';
+import { useContext } from 'react';
 
 const Navbar = () => {
+  const { user } = useContext(UserContext); //obtenemos el usuario del contexto
+
   return (
     <nav className="navbar">
       <Link to="/" className="nav-link">
         <h3>Nua </h3>
       </Link>
 
-      <Link to="/login" className="nav-link">
-        <button className="nav-button">Login</button>
-      </Link>
+      {user ? (
+        <>
+          <span className="nav-user">Hola, {user.email}!</span>
+          <Link to="/profile">
+            <button className="nav-button">Perfil</button>
+          </Link>
+        </>
+      ) : (
+        <Link to="/login" className="nav-link">
+          <button className="nav-button">Login</button>
+        </Link>
+      )}
 
       <Link to="/products" className="nav-link">
         <button className="nav-button">Productos</button>

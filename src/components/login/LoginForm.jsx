@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './LoginForm.css';
 import { useNavigate, Link } from 'react-router-dom';
-import users from '../../data/users';
+
+import UserContext from '../../context/UserContext'; //Contexto user
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -11,27 +12,12 @@ const LoginForm = () => {
   const [loginError, setLoginError] = useState('');
 
   const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      if (authenticateUser()) {
-        console.log('Inicio de sesión exitoso');
-        const user = users.find((user) => user.email === email);
-        if (user.role === 'admin') {
-          navigate('/admin'); // Si el rol es administrador nos envia a la pagina de admin.
-        } else {
-          navigate('/payment'); // Nos envia a la pagina de payment si el login es ok.
-        }
-      } else {
-        setLoginError('Correo electrónico o contraseña incorrectos');
-      }
-    }
-  };
+  const { updateUser } = useContext(UserContext);
 
   const validateForm = () => {
     let valid = true;
 
+    // checkeo de correo electronico
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setEmailError('Por favor ingresa un correo electrónico válido.');
       valid = false;
@@ -39,6 +25,7 @@ const LoginForm = () => {
       setEmailError('');
     }
 
+    // checkeo de la contraseña
     if (!password || password.length < 6) {
       setPasswordError('La contraseña debe tener al menos 6 caracteres.');
       valid = false;
@@ -49,11 +36,35 @@ const LoginForm = () => {
     return valid;
   };
 
+  //  autenticar al usuario
   const authenticateUser = () => {
-    const user = users.find(
-      (user) => user.email === email && user.password === password
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    return storedUsers.find(
+      (storedUser) =>
+        storedUser.email === email && storedUser.password === password
     );
-    return user !== undefined; // Retorna true si el usuario existe
+  };
+
+  // envio formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      const user = authenticateUser();
+
+      if (user) {
+        // Si se encuentra el usuario, actualizamos el contexto y redirigimos
+        updateUser(user);
+
+        // redirigimos
+        if (user.role === 'admin') {
+          navigate('/admin');
+        } else {
+          navigate('/');
+        }
+      } else {
+        setLoginError('Correo electrónico o contraseña incorrectos');
+      }
+    }
   };
 
   return (

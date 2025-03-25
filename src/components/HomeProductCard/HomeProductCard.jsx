@@ -35,13 +35,15 @@ const HomeProductCard = ({ category }) => {
         <div className="home-product-grid">
         {allFiltered.slice(0, number).map((producto) => (
             <div className="home-product-img" key={producto.id} >
-                <Link to={`/Product/:${producto.id}`}>
+                <Link to={`/Product/${producto.id}`}>
                     <img src={producto.images.model} alt={`${producto.name} - Modelo`} />
                 </Link>
             </div>
         ))}
             <div className="home-product-bt">
-                <a className="secondary-button">Ver todo <FaLongArrowAltRight /></a>
+            <Link to={`/products/${category}`} className="secondary-button" category={category}>
+                    Ver todo <FaLongArrowAltRight />
+            </Link>
             </div>
         </div>
     );

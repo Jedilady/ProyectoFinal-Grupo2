@@ -1,5 +1,5 @@
 .footer {
-    background-color: #262525;
+    background-color: white;
     color: rgba(255, 255, 255, 0.432);
     text-align: center;
     padding: 20px 0; 
@@ -55,7 +55,7 @@
   }
   
   .footer-section a:hover {
-    color: #f7f0a9;
+    color: #d8fbb5;
 
   }
   
@@ -74,23 +74,23 @@
   }
   
   .icon.linkedin:hover {
-    color: #0077b5;
+    color: #90d2f5;
   }
   
   .icon.facebook:hover {
-    color: #1877f2;
+    color: #90d2f5;
   }
   
   .icon.instagram:hover {
-    color: #e4405f;
+    color: #fab4c1;
   }
   
   .icon.youtube:hover {
-    color: #ff0000;
+    color: #fab4c1;
   }
   
   .icon.twitter:hover {
-    color: #1da1f2;
+    color: #90d2f5;
   }
   
   /* Derechos Reservados */

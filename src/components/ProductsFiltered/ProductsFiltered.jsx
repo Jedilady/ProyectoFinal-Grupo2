@@ -1,6 +1,8 @@
 import { useContext, useState, useEffect } from "react";
-import { ProductsContext } from "../context/ProductsContext";
-import ProductCard from "../components/ProductCard";
+import { ProductsContext } from "../../context/ProductsContext";
+import ProductCard from "../ProductCard/ProductCard";
+
+import './ProductsFiltered.css'
 
 export const ProductsFiltered = ({category}) => {   
     

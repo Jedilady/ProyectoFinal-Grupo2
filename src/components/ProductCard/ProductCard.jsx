@@ -1,8 +1,25 @@
-import React from 'react';
+import './ProductCard.css'
 
 const ProductCard = ({ product }) => {
 return (
-    <div className={ProductCard.css}>
+    <div className="product-card">
+        <div className='product-card-img'>
+            <img src={product.images.model} alt={`${product.name} - Modelo`} />
+        </div>
+        <div className='product-card-img-alt'>
+            <img src={product.images.front} alt={`${product.name} - Frente`} />
+        </div>
+        <span className='product-card-name'>{product.name}</span>
+        <span className='product-card-price'>Precio: ${product.price}</span>
+    </div>
+);
+};
+
+export default ProductCard;
+
+/* TEMPORAL - Referencia del todos los datos del producto
+return (
+    <div>
     <h3>{product.name}</h3>
     <p>{product.category}</p>
     <p>Precio: ${product.price}</p>
@@ -18,6 +35,4 @@ return (
     </div>
     </div>
 );
-};
-
-export default ProductCard;
+*/

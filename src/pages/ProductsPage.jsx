@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";//para poder pasar la categoría
-import {ProductsFiltered} from "../components/ProductsFiltered";
+import {ProductsFiltered} from "../components/ProductsFiltered/ProductsFiltered";
 
 function ProductsPage() {
 
@@ -9,7 +9,7 @@ function ProductsPage() {
 
   return (
     <div>
-      <h1>Esto es ProductsPage</h1>
+      <h1>{category ? category : (novedades ? novedades : "Nuestros productos")}</h1>
       { novedades ? 
         (<ProductsFiltered category={"novedades"}/>) :
         ( category ? 

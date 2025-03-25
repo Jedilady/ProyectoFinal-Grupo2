@@ -16,6 +16,11 @@ html, body {
 }
 
 /* Fonts */
+h1 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
 h2 {
     font-weight: 300;
     font-size: 2rem;

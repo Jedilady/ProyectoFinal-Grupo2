@@ -1,4 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useMemo } from 'react';
+import { getAuthenticatedUser } from '../utils/userDDBB';
 
 // contexto para  usuario
 const UserContext = createContext();
@@ -11,28 +12,31 @@ export const UserProvider = ({ children }) => {
     console.log('Valor en localStorage:', storedUser); // verifica el localStorage
 
     if (storedUser) {
-      setUser(storedUser);
+      setUser(JSON.parse(storedUser));
     }
   }, []);
 
   // actualizar los datos del usuario
-  const updateUser = (updatedUser) => {
-    if (updatedUser) {
-      setUser(updatedUser);
-      try {
-        // guardar el usuario actualizado
-        localStorage.setItem('user', JSON.stringify(updatedUser));
-        console.log('Usuario actualizado:', updatedUser);
-      } catch (error) {
-        console.error('Error al guardar el usuario en localStorage:', error);
-      }
-    }
+  const login = ({ email, password }) => {
+    const user = getAuthenticatedUser({ email, password });
+    if (!user) return;
+
+    // guardar el uuario actualizado
+    localStorage.setItem('user', JSON.stringify(user));
+    setUser(user);
+    console.log('Usuario actualizado:', user);
+    return user;
   };
 
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('user');
+  };
+
+  const contextValue = useMemo(() => ({ user, login, logout }), [user]);
+
   return (
-    <UserContext.Provider value={{ user, updateUser }}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
 };
 

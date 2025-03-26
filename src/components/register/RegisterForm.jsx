@@ -2,43 +2,57 @@ import { useState, useContext } from 'react';
 import './RegisterForm.css';
 import { useNavigate, Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
+import { addUser } from '../../utils/userDDBB';
 
 const RegisterForm = () => {
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [lastNameError, setLastNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
   const [registrationError, setRegistrationError] = useState('');
-  const { updateUser } = useContext(UserContext);
+  const { login } = useContext(UserContext);
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-      if (storedUsers.some((user) => user.email === email)) {
-        setRegistrationError('Este correo electrónico ya está registrado.');
-      } else {
+      try {
         const newUser = { email, password, role: 'user' };
-
-        storedUsers.push(newUser);
-        localStorage.setItem('users', JSON.stringify(storedUsers));
-
-        updateUser(newUser);
+        const updatedUser = addUser(newUser);
+        login(updatedUser);
 
         console.log('Usuario registrado exitosamente:', email);
 
         // redirigmos
-        navigate('/home');
+        navigate('/');
+      } catch (error) {
+        setRegistrationError(error.message);
       }
     }
   };
 
   const validateForm = () => {
     let valid = true;
+    if (!name) {
+      setNameError('Por favor ingresa un nombre');
+      valid = false;
+    } else {
+      setNameError('');
+    }
+
+    if (!lastName) {
+      setNameError('Por favor ingresa un apellido');
+      valid = false;
+    } else {
+      setLastNameError('');
+    }
 
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setEmailError('Por favor ingresa un correo electrónico válido.');
@@ -74,13 +88,42 @@ const RegisterForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-container">
             <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="input"
+              id="name"
+            />
+            <label htmlFor="name" className="label">
+              Nombre
+            </label>
+            {nameError && <p className="error">{nameError}</p>}
+          </div>
+
+          <div className="input-container">
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="input"
+              id="lastName"
+            />
+            <label htmlFor="lastName" className="label">
+              Apellidos
+            </label>
+            {lastNameError && <p className="error">{lastNameError}</p>}
+          </div>
+
+          <div className="input-container">
+            <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="input"
+              id="email"
             />
             <label htmlFor="email" className="label">
-              e-mail
+              E-mail
             </label>
             {emailError && <p className="error">{emailError}</p>}
           </div>
@@ -91,6 +134,7 @@ const RegisterForm = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input"
+              id="password"
             />
             <label htmlFor="password" className="label">
               Contraseña
@@ -104,8 +148,9 @@ const RegisterForm = () => {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               className="input"
+              id="confirmPassword"
             />
-            <label htmlFor="password" className="label">
+            <label htmlFor="confirmPassword" className="label">
               Repetir Contraseña
             </label>
             {confirmPasswordError && (

@@ -9,12 +9,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="nav-link">
-        <span className='nav-logo'>Nua</span>
+        <span className="nav-logo">Nua</span>
       </Link>
 
       {user ? (
         <>
-          <span className="nav-user">Hola, {user.email}!</span>
+          <span className="nav-user">Hola, {user.name || 'Desconocido'}!</span>
           <Link to="/profile">
             <button className="nav-button">Perfil</button>
           </Link>

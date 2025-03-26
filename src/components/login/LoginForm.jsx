@@ -12,7 +12,7 @@ const LoginForm = () => {
   const [loginError, setLoginError] = useState('');
 
   const navigate = useNavigate();
-  const { updateUser } = useContext(UserContext);
+  const { login } = useContext(UserContext);
 
   const validateForm = () => {
     let valid = true;
@@ -35,25 +35,13 @@ const LoginForm = () => {
 
     return valid;
   };
-
-  //  autenticar al usuario
-  const authenticateUser = () => {
-    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    return storedUsers.find(
-      (storedUser) =>
-        storedUser.email === email && storedUser.password === password
-    );
-  };
-
   // envio formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      const user = authenticateUser();
-
-      if (user) {
+      try {
         // Si se encuentra el usuario, actualizamos el contexto y redirigimos
-        updateUser(user);
+        const user = login({ password: password, email: email });
 
         // redirigimos
         if (user.role === 'admin') {
@@ -61,8 +49,8 @@ const LoginForm = () => {
         } else {
           navigate('/');
         }
-      } else {
-        setLoginError('Correo electrónico o contraseña incorrectos');
+      } catch (error) {
+        setLoginError(error.message);
       }
     }
   };

@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './LoginForm.css';
 import { useNavigate, Link } from 'react-router-dom';
-import users from '../../data/users';
+
+import UserContext from '../../context/UserContext'; //Contexto user
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -11,27 +12,12 @@ const LoginForm = () => {
   const [loginError, setLoginError] = useState('');
 
   const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      if (authenticateUser()) {
-        console.log('Inicio de sesión exitoso');
-        const user = users.find((user) => user.email === email);
-        if (user.role === 'admin') {
-          navigate('/admin'); // Si el rol es administrador nos envia a la pagina de admin.
-        } else {
-          navigate('/payment'); // Nos envia a la pagina de payment si el login es ok.
-        }
-      } else {
-        setLoginError('Correo electrónico o contraseña incorrectos');
-      }
-    }
-  };
+  const { login } = useContext(UserContext);
 
   const validateForm = () => {
     let valid = true;
 
+    // checkeo de correo electronico
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setEmailError('Por favor ingresa un correo electrónico válido.');
       valid = false;
@@ -39,6 +25,7 @@ const LoginForm = () => {
       setEmailError('');
     }
 
+    // checkeo de la contraseña
     if (!password || password.length < 6) {
       setPasswordError('La contraseña debe tener al menos 6 caracteres.');
       valid = false;
@@ -48,18 +35,30 @@ const LoginForm = () => {
 
     return valid;
   };
+  // envio formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      try {
+        // Si se encuentra el usuario, actualizamos el contexto y redirigimos
+        const user = login({ password: password, email: email });
 
-  const authenticateUser = () => {
-    const user = users.find(
-      (user) => user.email === email && user.password === password
-    );
-    return user !== undefined; // Retorna true si el usuario existe
+        // redirigimos
+        if (user.role === 'admin') {
+          navigate('/admin');
+        } else {
+          navigate('/');
+        }
+      } catch (error) {
+        setLoginError(error.message);
+      }
+    }
   };
 
   return (
     <div className="layout-container">
       <div className="container">
-        <h2 className="title">Iniciar Sesión</h2>
+        <h2 className="title">INICIAR SESIÓN</h2>
         <p className="subtitle">
           Introduce tu correo y contraseña para acceder
         </p>
@@ -100,7 +99,7 @@ const LoginForm = () => {
           </p>
 
           <button type="submit" className="button">
-            Iniciar sesión
+            INICIAR SESIÓN
           </button>
         </form>
       </div>
@@ -116,7 +115,7 @@ const LoginForm = () => {
           alta.
         </p>
         <Link to="/register">
-          <button className="button">Crear usuario</button>
+          <button className="button-second">CREAR USUARIO</button>
         </Link>
       </div>
     </div>

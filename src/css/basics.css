@@ -44,3 +44,20 @@ h2 {
 .secondary-button {
     color: var(--main-color);
 }
+
+/* Hidden */
+@media screen and (max-width: 412px) {
+    .hidden-xs {
+        display: none;
+    }    
+}
+@media screen and (min-width: 413px) and (max-width: 1439px) {
+    .hidden-md {
+        display: none;
+    }    
+}
+@media screen and (min-width: 1449px) {
+    .hidden-lg {
+        display: none;
+    }    
+}

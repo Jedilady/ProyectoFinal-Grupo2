@@ -33,42 +33,28 @@ const Navbar = () => {
       </div>
       {/* Grupo de enlaces de usuario a la derecha (iconos en móvil)*/}
       <div className='nav-right'>
+        {user ? (
+          <>
+            <span className="nav-user">Hola, {user.name || 'Desconocido'}!</span>
+            <Link to="/profile">
+              <button className="nav-button">Perfil</button>
+            </Link>
+          </>
+        ) : (
+          <Link to="/login" className="nav-link">
+            <button className="hidden-xs nav-button">Login</button>
+            <BsPersonCircle className='hidden-md hidden-lg' />
+          </Link>
+        )}
         <Link to="/products" className="nav-link">
           <button className="hidden-xs nav-button">Productos</button>
           <BsBag className='hidden-md hidden-lg' />
-        </Link>
-        <Link to="/login" className="nav-link">
-          <button className="hidden-xs nav-button">Login</button>
-          <BsPersonCircle className='hidden-md hidden-lg' />
         </Link>
         <Link to="/cart">
           <button className="hidden-xs nav-button">Carrito</button>
           <BsCart2 className='hidden-md hidden-lg' />
         </Link>
       </div>
-      <Link to="/" className="nav-link">
-        <span className="nav-logo">Nua</span>
-      </Link>
-
-      {user ? (
-        <>
-          <span className="nav-user">Hola, {user.name || 'Desconocido'}!</span>
-          <Link to="/profile">
-            <button className="nav-button">Perfil</button>
-          </Link>
-        </>
-      ) : (
-        <Link to="/login" className="nav-link">
-          <button className="nav-button">Login</button>
-        </Link>
-      )}
-
-      <Link to="/products" className="nav-link">
-        <button className="nav-button">Productos</button>
-      </Link>
-      <Link to="/cart">
-        <button className="nav-button">Carrito</button>
-      </Link>
     </nav>
   );
 };

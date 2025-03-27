@@ -8,7 +8,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 413px) {
+@media screen and (max-width: 530px) {
   .navbar {
     justify-items: start;
   }

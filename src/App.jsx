@@ -23,8 +23,8 @@ import './App.css';
 
 function App() {
   return (
-    <CartProvider>
-      <UserProvider>
+    <UserProvider>
+      <CartProvider>
         <AllProductsProvider>
           <Navbar />
           <Routes>
@@ -42,11 +42,11 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
-        </Routes>
+          </Routes>
           <CustomFooter />
         </AllProductsProvider>
-      </UserProvider>
       </CartProvider>
+    </UserProvider>
   );
 }
 

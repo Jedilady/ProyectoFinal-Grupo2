@@ -1,20 +1,31 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { BsPersonCircle, BsCart2, BsBag } from "react-icons/bs";
+import { useState, useContext, useEffect } from 'react';
+import { BsPersonCircle, BsCart2, BsBag, BsList, BsXLg } from "react-icons/bs";
 import './Navbar.css';
 import UserContext from '../../context/UserContext';
-import { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
   const { user } = useContext(UserContext); //obtenemos el usuario del contexto
+  
+  //Manejo del menú hamburguesa
+  //seteo para manejar si el menú está abierto o cerrado (cerrado/false por default)
+  const [menuOpen, setMenuOpen] = useState(false);
+  //llamamos al hook de location para usarlo en el useEffect
+  const location = useLocation();
 
-  return (
-    <nav className="navbar">
-      <div className='nav-left'>
-        {/* Grupo de enlaces a Productos la izquierda (ocultos en móvil) */}
+  //Usamos un useEffect para que, al cambiar de url, se cierre el menú automáticamente
+  useEffect (() =>
+    (
+      setMenuOpen(false)
+    ),[location.pathname]
+  )
+
+
+  const navProductsContent = () => {
+    return (
+      <>
         <Link to="/products/Blusas">
             <button className="footer-button">Blusas</button>
         </Link>
@@ -24,35 +35,66 @@ const Navbar = () => {
         <Link to="/products/Vestidos">
           <button className="footer-button">Vestidos</button>
         </Link>
+      </>
+    )
+  }
+
+  return (
+    <nav className="navbar">
+      
+      {/* Grupo de enlaces a Productos la izquierda (ocultos en móvil) */}
+      <div className='nav-left'>
+        {navProductsContent()}
       </div>
+
+      {/* Menú hamburguesa en móviles */}
+      <div className='nav-burger'>
+      <button 
+          className="nav-burger-button" 
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {!menuOpen && <BsList />}
+          {menuOpen && <BsXLg />}
+        </button>
+      </div>
+
+      {/* Menú desplegable en móviles */}
+      {menuOpen && (
+        <div className='nav-left-mobile'>
+          {navProductsContent()}
+        </div>
+      )}
+      
       {/* Centro: logo */}
       <div className='nav-logo-home'>
         <Link to="/" className="nav-link">
           <span className='nav-logo'>Nüa</span>
         </Link>
+      
       </div>
       {/* Grupo de enlaces de usuario a la derecha (iconos en móvil)*/}
       <div className='nav-right'>
         {user ? (
           <>
-            <span className="nav-user">Hola, {user.name || 'Desconocido'}!</span>
+            <span className="nav-user hidden-xs">Hola, {user.name || 'Desconocido'}!</span>
             <Link to="/profile">
-              <button className="nav-button">Perfil</button>
+              <button className="hidden-xs hidden-s nav-button">Perfil</button>
+              <BsPersonCircle className='nav-icon hidden-md hidden-lg nav-user-icon-logged' />
             </Link>
           </>
         ) : (
           <Link to="/login" className="nav-link">
-            <button className="hidden-xs nav-button">Login</button>
-            <BsPersonCircle className='hidden-md hidden-lg' />
+            <button className="hidden-xs hidden-s nav-button">Login</button>
+            <BsPersonCircle className='nav-icon hidden-md hidden-lg' />
           </Link>
         )}
         <Link to="/products" className="nav-link">
-          <button className="hidden-xs nav-button">Productos</button>
-          <BsBag className='hidden-md hidden-lg' />
+          <button className="hidden-xs hidden-s nav-button">Productos</button>
+          <BsBag className='nav-icon hidden-md hidden-lg' />
         </Link>
         <Link to="/cart">
-          <button className="hidden-xs nav-button">Carrito</button>
-          <BsCart2 className='hidden-md hidden-lg' />
+          <button className="hidden-xs hidden-s nav-button">Carrito</button>
+          <BsCart2 className='nav-icon hidden-md hidden-lg' />
         </Link>
       </div>
     </nav>

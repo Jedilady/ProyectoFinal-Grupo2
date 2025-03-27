@@ -51,12 +51,17 @@ h2 {
         display: none;
     }    
 }
-@media screen and (min-width: 413px) and (max-width: 1439px) {
+@media screen and (min-width: 413px) and (max-width: 780px) {
+    .hidden-s {
+        display: none;
+    }    
+}
+@media screen and (min-width: 781px) and (max-width: 1439px) {
     .hidden-md {
         display: none;
     }    
 }
-@media screen and (min-width: 1449px) {
+@media screen and (min-width: 1440px) {
     .hidden-lg {
         display: none;
     }    

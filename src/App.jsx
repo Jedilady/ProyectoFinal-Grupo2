@@ -15,11 +15,14 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
+import { CartProvider } from './context/CartContext';
+import CheckoutPage from './components/shoppingCart/CheckoutPage';
+/*import shoppingCart from "./components/shoppingCart/Cart";*/
 import "./App.css";
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <AllProductsProvider>
         <Navbar />
         <Routes>
@@ -35,11 +38,12 @@ function App() {
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
         <Footer />
         <CustomFooter />
       </AllProductsProvider>
-    </>
+      </CartProvider>
   );
 }
 

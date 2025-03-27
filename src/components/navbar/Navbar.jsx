@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useContext, useEffect } from 'react';
 import { BsPersonCircle, BsCart2, BsBag, BsList, BsXLg } from "react-icons/bs";
+import { useCart } from "../../context/CartContext";
 import './Navbar.css';
 import UserContext from '../../context/UserContext';
 import { useLocation } from 'react-router-dom';
@@ -39,8 +40,30 @@ const Navbar = () => {
     )
   }
 
+  const { totalItems } = useCart(); //SE OBTIENE EL NUMERO TOTAL DE PRODUCTOS EN EL CARRITO LEIDY//
   return (
     <nav className="navbar">
+      <Link to="/" className="nav-link">
+        <span className='nav-logo'>NÜA</span>
+      </Link>
+
+      {user ? (
+        <>
+          <span className="nav-user">Hola, {user.name || 'Desconocido'}!</span>
+          <Link to="/profile">
+            <button className="nav-button">Perfil</button>
+          </Link>
+        </>
+      ) : (
+        <Link to="/login" className="nav-link">
+          <button className="nav-button">Login</button>
+        </Link>
+      )}
+
+      <Link to="/products" className="nav-link">
+        <button className="nav-button">Productos</button>
+      </Link>
+      <Link to="/cart">🛒Carrito ({totalItems})</Link>
       
       {/* Grupo de enlaces a Productos la izquierda (ocultos en móvil) */}
       <div className='nav-left'>

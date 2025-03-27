@@ -15,12 +15,15 @@ import {
 import Navbar from './components/navbar/Navbar';
 import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
+import { CartProvider } from './context/CartContext';
+import CheckoutPage from './components/shoppingCart/CheckoutPage';
+/*import shoppingCart from "./components/shoppingCart/Cart";*/
 import { UserProvider } from './context/UserContext';
 import './App.css';
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <UserProvider>
         <AllProductsProvider>
           <Navbar />
@@ -38,11 +41,12 @@ function App() {
             <Route path="/payment" element={<PaymentPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+            <Route path="/checkout" element={<CheckoutPage />} />
+        </Routes>
           <CustomFooter />
         </AllProductsProvider>
       </UserProvider>
-    </>
+      </CartProvider>
   );
 }
 

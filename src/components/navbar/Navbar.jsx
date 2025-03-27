@@ -9,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 const Navbar = () => {
 
   const { user } = useContext(UserContext); //obtenemos el usuario del contexto
+  const { totalItems } = useCart(); //SE OBTIENE EL NUMERO TOTAL DE PRODUCTOS EN EL CARRITO LEIDY//
   
   //Manejo del menú hamburguesa
   //seteo para manejar si el menú está abierto o cerrado (cerrado/false por default)
@@ -24,6 +25,7 @@ const Navbar = () => {
   //ToDo: cerrar menu/marcar en el menú cuando se hace click al mismo url en el que se está
 
 
+  //manejador de los enlaces a productos
   const navProductsContent = () => {
     return (
       <>
@@ -40,30 +42,8 @@ const Navbar = () => {
     )
   }
 
-  const { totalItems } = useCart(); //SE OBTIENE EL NUMERO TOTAL DE PRODUCTOS EN EL CARRITO LEIDY//
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-link">
-        <span className='nav-logo'>NÜA</span>
-      </Link>
-
-      {user ? (
-        <>
-          <span className="nav-user">Hola, {user.name || 'Desconocido'}!</span>
-          <Link to="/profile">
-            <button className="nav-button">Perfil</button>
-          </Link>
-        </>
-      ) : (
-        <Link to="/login" className="nav-link">
-          <button className="nav-button">Login</button>
-        </Link>
-      )}
-
-      <Link to="/products" className="nav-link">
-        <button className="nav-button">Productos</button>
-      </Link>
-      <Link to="/cart">🛒Carrito ({totalItems})</Link>
       
       {/* Grupo de enlaces a Productos la izquierda (ocultos en móvil) */}
       <div className='nav-left'>
@@ -81,13 +61,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Menú desplegable en móviles - old version
-      {menuOpen && (
-        <div className={'nav-left-mobile'}>
-          {navProductsContent()}
-        </div>
-      )}
-      */}
       {/* Menú desplegable en móviles - con animación */}
       <div className={`nav-left-mobile ${menuOpen ? "open" : ""}`}>
         {navProductsContent()}
@@ -120,9 +93,9 @@ const Navbar = () => {
           <button className="hidden-xs hidden-s nav-button">Productos</button>
           <BsBag className='nav-icon hidden-md hidden-lg' />
         </Link>
-        <Link to="/cart">
-          <button className="hidden-xs hidden-s nav-button">Carrito</button>
-          <BsCart2 className='nav-icon hidden-md hidden-lg' />
+        <Link to="/cart" className='nav-cart-bt'>
+          <button className="hidden-xs hidden-s nav-button">Carrito ({totalItems})</button>
+          <BsCart2 className='nav-icon hidden-md hidden-lg' /><span className='hidden-md hidden-lg'>({totalItems})</span>
         </Link>
       </div>
     </nav>

@@ -3,7 +3,6 @@ import {
   LoginPage,
   HomePage,
   RegisterPage,
-  ProductIdPage,
   ProductsPage,
   AdminPage,
   CartPage,
@@ -15,6 +14,7 @@ import Navbar from './components/navbar/Navbar';
 import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
 import "./App.css";
+import ProductsDetail from './components/ProductsDetail/ProductsDetail';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:category" element={<ProductsPage />} />
           <Route path="/products/:novedades" element={<ProductsPage />} />
-          <Route path="/Product/:productId" element={<ProductIdPage />} />
+          <Route path="/Product/:productId" element={<ProductsDetail />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/payment" element={<PaymentPage />} />

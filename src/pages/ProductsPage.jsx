@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";//para poder pasar la categoría
+import { Link } from "react-router-dom";  // Necesario para enlazar a la página del detalle
 import {ProductsFiltered} from "../components/ProductsFiltered/ProductsFiltered";
 
 function ProductsPage() {

@@ -69,6 +69,7 @@ const Navbar = () => {
       {/* Centro: logo */}
       <div className='nav-logo-home'>
         <Link to="/" className="nav-link">
+          <span className='nav-logo-img'></span>
           <span className='nav-logo'>Nüa</span>
         </Link>
       

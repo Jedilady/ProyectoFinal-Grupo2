@@ -8,7 +8,7 @@
   position: relative;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 529px) {
   .navbar {
     justify-items: start;
   }
@@ -50,7 +50,7 @@
 }
 
 .nav-left-mobile {
-  position:absolute;
+  position:fixed;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -59,6 +59,14 @@
   background-color: white;
   border: 1px solid #8080802e;
   z-index: 10;
+}
+
+.nav-left-mobile { 
+  left: -300px;
+  transition: left 0.3s ease-out;
+}
+.nav-left-mobile.open { 
+  left: 0px;
 }
 
 .nav-burger {
@@ -77,7 +85,8 @@
   }
 }
 @media screen and (min-width: 530px) {
-  .nav-burger {
+  .nav-burger,
+  .nav-left-mobile  {
     display: none;
   }
 }

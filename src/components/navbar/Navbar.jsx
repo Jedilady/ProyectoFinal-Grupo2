@@ -16,11 +16,11 @@ const Navbar = () => {
   const location = useLocation();
 
   //Usamos un useEffect para que, al cambiar de url, se cierre el menú automáticamente
-  useEffect (() =>
-    (
+  useEffect (() => {
       setMenuOpen(false)
-    ),[location.pathname]
+    },[location.pathname]
   )
+  //ToDo: cerrar menu/marcar en el menú cuando se hace click al mismo url en el que se está
 
 
   const navProductsContent = () => {
@@ -58,12 +58,17 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Menú desplegable en móviles */}
+      {/* Menú desplegable en móviles - old version
       {menuOpen && (
-        <div className='nav-left-mobile'>
+        <div className={'nav-left-mobile'}>
           {navProductsContent()}
         </div>
       )}
+      */}
+      {/* Menú desplegable en móviles - con animación */}
+      <div className={`nav-left-mobile ${menuOpen ? "open" : ""}`}>
+        {navProductsContent()}
+      </div>
       
       {/* Centro: logo */}
       <div className='nav-logo-home'>

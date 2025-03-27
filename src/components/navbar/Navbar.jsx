@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useCart } from "../../context/CartContext";
 import './Navbar.css';
 import UserContext from '../../context/UserContext';
 import { useContext } from 'react';
@@ -6,10 +7,11 @@ import { useContext } from 'react';
 const Navbar = () => {
   const { user } = useContext(UserContext); //obtenemos el usuario del contexto
 
+  const { totalItems } = useCart(); //SE OBTIENE EL NUMERO TOTAL DE PRODUCTOS EN EL CARRITO LEIDY//
   return (
     <nav className="navbar">
       <Link to="/" className="nav-link">
-        <span className="nav-logo">Nua</span>
+        <span className='nav-logo'>NÜA</span>
       </Link>
 
       {user ? (
@@ -28,9 +30,7 @@ const Navbar = () => {
       <Link to="/products" className="nav-link">
         <button className="nav-button">Productos</button>
       </Link>
-      <Link to="/cart">
-        <button className="nav-button">Carrito</button>
-      </Link>
+      <Link to="/cart">🛒Carrito ({totalItems})</Link>
     </nav>
   );
 };

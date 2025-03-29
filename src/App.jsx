@@ -3,7 +3,6 @@ import {
   LoginPage,
   HomePage,
   RegisterPage,
-  ProductIdPage,
   ProductsPage,
   AdminPage,
   CartPage,
@@ -20,6 +19,7 @@ import CheckoutPage from './components/shoppingCart/CheckoutPage';
 /*import shoppingCart from "./components/shoppingCart/Cart";*/
 import { UserProvider } from './context/UserContext';
 import './App.css';
+import ProductsDetail from './components/ProductsDetail/ProductsDetail';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:category" element={<ProductsPage />} />
             <Route path="/products/:novedades" element={<ProductsPage />} />
-            <Route path="/Product/:productId" element={<ProductIdPage />} />
+            <Route path="/Product/:id" element={<ProductsDetail />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/profile" element={<ProfilePage />} />

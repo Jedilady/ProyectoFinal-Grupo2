@@ -1,0 +1,123 @@
+/* Estilos para el contenedor principal del detalle del producto */
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap:20px;
+}
+
+  /* Estilos para la sección de imágenes del producto */
+.product-images {
+    flex: 1;
+    /*margin-right: 20px;*/
+}
+
+.product-images img {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+  /* Estilos para las miniaturas de las imágenes */
+.image-thumbnails {
+    display: flex;
+    margin-top: 10px;
+}
+
+.image-thumbnails img {
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    gap:10px;
+    margin-top:10xp;
+}
+
+.image-thumbnails img:hover {
+    transform: scale(1.1);
+}
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+  /* Estilos para la información del producto */
+.product-info {
+    flex: 2;
+}
+.color-circles {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Estilos para el selector de color */
+.color-circles {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: 'pointer',  /* Cambiar el cursor al pasar sobre el círculo*/
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+ /*Estilos para el selector de tamaño */
+.product-info select {
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+  /* Estilos para los botones */
+.product-info button {
+        border-radius: 100px;
+        border: 1px solid var(--main-color);
+        padding: 0.25rem 1rem;
+        cursor: pointer;
+    }
+    
+
+.product-info .add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.product-info .add-to-favorites {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.product-info button:hover {
+    transform: scale(1.05);
+}
+
+.product-info .add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.product-info .add-to-favorites:hover {
+    background-color: #218838;
+}
+

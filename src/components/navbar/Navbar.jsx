@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useContext, useEffect } from 'react';
-import { BsPersonCircle, BsCart2, BsBag, BsList, BsXLg } from 'react-icons/bs';
+import { BsPersonCircle, BsCart2, BsBag, BsList, BsXLg, BsBoxArrowInRight } from 'react-icons/bs';
 import { useCart } from '../../context/CartContext';
 import './Navbar.css';
 import UserContext from '../../context/UserContext';
@@ -71,36 +71,37 @@ const Navbar = () => {
       <div className="nav-right">
         {user ? (
           <>
-            <span className="nav-user hidden-xs">
+            <span className="nav-user hidden-xs hidden-s">
               Hola, {user.name || 'Desconocido'}!
             </span>
             <Link to="/profile">
-              <button className="hidden-xs hidden-s nav-button">Perfil</button>
-              <BsPersonCircle className="nav-icon hidden-md hidden-lg nav-user-icon-logged" />
+              <button className="hidden-xs hidden-s hidden-md nav-button">Perfil</button>
+              <BsPersonCircle className="nav-icon hidden-lg hidden-xlg nav-user-icon-logged" />
             </Link>
             <button
               onClick={logout}
-              className="hidden-xs hidden-s nav-button logout-button"
+              className="hidden-xs hidden-s nav-button hidden-md logout-button"
             >
               Log Out
             </button>
+            <BsBoxArrowInRight className="nav-icon hidden-lg hidden-xlg" />
           </>
         ) : (
           <Link to="/login" className="nav-link">
-            <button className="hidden-xs hidden-s nav-button">Login</button>
-            <BsPersonCircle className="nav-icon hidden-md hidden-lg" />
+            <button className="hidden-xs hidden-s hidden-md nav-button">Login</button>
+            <BsPersonCircle className="nav-icon hidden-lg hidden-xlg" />
           </Link>
         )}
         <Link to="/products" className="nav-link">
-          <button className="hidden-xs hidden-s nav-button">Productos</button>
-          <BsBag className="nav-icon hidden-md hidden-lg" />
+          <button className="hidden-xs hidden-s hidden-md nav-button">Productos</button>
+          <BsBag className="nav-icon hidden-lg hidden-xlg" />
         </Link>
         <Link to="/cart" className="nav-cart-bt">
-          <button className="hidden-xs hidden-s nav-button">
+          <button className="hidden-xs hidden-s hidden-md nav-button">
             Carrito ({totalItems})
           </button>
-          <BsCart2 className="nav-icon hidden-md hidden-lg" />
-          <span className="hidden-md hidden-lg">({totalItems})</span>
+          <BsCart2 className="nav-icon hidden-lg hidden-xlg" />
+          <span className="hidden-lg hidden-xlg">({totalItems})</span>
         </Link>
       </div>
     </nav>

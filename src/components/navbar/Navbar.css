@@ -39,7 +39,7 @@
 
 .nav-logo-img {
   display: inline-block;
-  background-image: url('../../../public/logo/logo.png');
+  background-image: url('../../../logo/logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.25rem;

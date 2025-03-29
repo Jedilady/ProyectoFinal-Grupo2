@@ -175,7 +175,7 @@
     "descripcion":"Blusa de estampados retro.",
     "stock": 15,
     "images": {
-    "model": "/camisas/camisa1 -1.jpg",
+    "model": "/camisas/camisa12 -1.jpg",
     "front": "/camisas/camisa12 -2.jpg",
     "back": "/camisas/camisa12 - 3.jpg"
 }
@@ -190,7 +190,7 @@
     "descripcion":"Blusa de seda con drapeado en lado derecho.",
     "stock": 30,
     "images": {
-    "model": "/camisas/camisa13 1.jpg",
+    "model": "/camisas/camisa13 -1.jpg",
     "front": "/camisas/camisa13 -2.jpg",
     "back": "/camisas/camisa13 -3.jpg"
 }

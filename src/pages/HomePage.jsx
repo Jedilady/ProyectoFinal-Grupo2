@@ -6,8 +6,7 @@ function HomePage() {
 
   return (
     <div>
-      <HomePageBanner/>
-      <span>Aquí va el banner</span>      
+      <HomePageBanner category={"novedades"}/>   
       <section className="home-section">
         <h2>Blusas</h2>
         <HomeProductCard category={"Blusas"} />

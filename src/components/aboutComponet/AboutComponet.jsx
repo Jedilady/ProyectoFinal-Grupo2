@@ -50,7 +50,7 @@ const AboutComponent = () => {
         <div className="team">
           <h3 className="title-team">El equipo de desarrollo:</h3>
           <p>
-            <strong>Delcy, Leidy, Juvily y Jennifer</strong>
+            <strong>Delcy, Leidy, Juvili y Jennifer</strong>
           </p>
         </div>
       </div>

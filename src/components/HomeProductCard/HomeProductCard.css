@@ -33,6 +33,11 @@
     align-items: center;
     gap: 0.25rem;
     font-size: 0.7rem;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--gray10);
+    }
 }
 @media screen and (min-width: 413px) {
     .home-product-grid .home-product-bt a {

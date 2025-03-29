@@ -6,7 +6,7 @@
     "category": "Blusas",
     "price": 19.80,
     "sizes": ["S", "M", "L", "XL"],
-    "color":["Blanco con rayas Negras", "Blanca con rayas azul", "Blanca con rayas rojas"],
+    "colors":["#ff5733", "#fff546"],
     "descripcion":"Blusa de algodon de manga larga.",
     "stock": 50,
     "images": {
@@ -21,7 +21,7 @@
     "category": "Blusas",
     "price": 15.00,
     "sizes": ["S", "M", "L", "XL"],
-    "color":["Rosa", "Blanco", "Azul", "Rojo"],
+    "color":["Rosa",  "Blanco", "Azul", "Rojo"],
     "descripcion":"Blusa de Lana, con detalle en la parte frontal ideal para invierno.",
     "stock": 30,
     "images": {

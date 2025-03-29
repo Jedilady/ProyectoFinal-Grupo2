@@ -19,6 +19,14 @@
 
 .home-product-grid .home-product-img {
     width: 100%;
+
+    img {
+    transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
 }
 .home-product-grid .home-product-bt a {
     display: flex;

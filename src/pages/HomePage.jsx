@@ -5,7 +5,7 @@ import HomePageBanner from "../components/HomePageBanner/HomePageBanner";
 function HomePage() {
 
   return (
-    <div>
+    <div className="home-wrapper">
       <HomePageBanner category={"novedades"}/>   
       <section className="home-section">
         <h2>Blusas</h2>

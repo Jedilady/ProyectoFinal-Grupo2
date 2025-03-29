@@ -28,7 +28,7 @@ const HomePageBanner = ({category}) => {
     //llamadas a los productos de cada imagen
     //los números, en un caso real, no se definen de modo específico, vendrán dados por algún contexto como "novedades", o según se estipule en el proyecto
     const rightProd = product(3);
-    const leftProd = product(19);
+    const leftProd = product(45);
 
     //llamadas a las imagenes de cada producto
     const rightImg = rightProd.images.model;
@@ -40,22 +40,25 @@ const HomePageBanner = ({category}) => {
     
 
     return (
-        <div className="product-banner-content">
-            <img 
-                className='product-banner-img-left' 
-                src={leftImg ? leftImg : "/img/default.jpg"} 
-                alt={leftMsg ? `${leftMsg} - Modelo` : `Descripción no disponible`} 
-            />
-            <img 
-                className='product-banner-img-right' 
-                src={rightImg ? rightImg : "/img/default.jpg"} 
-                alt={rightMsg ? `${rightMsg} - Modelo` : `Descripción no disponible`} 
-            />
-            <span>
+        <div className="product-banner-wrapper">
+            <div className="product-banner-imgs">
+                <img 
+                    className='product-banner-img-left' 
+                    src={leftImg ? leftImg : "/img/default.jpg"} 
+                    alt={leftMsg ? `${leftMsg} - Modelo` : `Descripción no disponible`} 
+                />
+                <img 
+                    className='product-banner-img-right' 
+                    src={rightImg ? rightImg : "/img/default.jpg"} 
+                    alt={rightMsg ? `${rightMsg} - Modelo` : `Descripción no disponible`} 
+                />
+            </div>
+            <div className="product-banner-content">
+                <span>{category}</span>
                 <Link to={`/products/${category}`} className="secondary-button">
-                    Click Aquí
+                    click aquí
                 </Link>
-            </span>
+            </div>
         </div>
     );
 };

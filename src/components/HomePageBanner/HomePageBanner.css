@@ -1,0 +1,39 @@
+.product-banner-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray10);
+    width: 100%;
+    
+    .product-banner-imgs {
+        max-width: 1440px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-banner-content {
+        position: absolute;
+        bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            color: var(--gray00);
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            background-color: var(--gray00);
+            font-size: 1.5rem;
+            padding: 0.5rem 2rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+        a:hover {
+            background-color: var(--gray10);
+        }
+    }
+}

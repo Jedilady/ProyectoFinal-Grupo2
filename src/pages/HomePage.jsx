@@ -1,11 +1,12 @@
 import HomeProductCard from "../components/HomeProductCard/HomeProductCard";
+import HomePageBanner from "../components/HomePageBanner/HomePageBanner";
 
 
 function HomePage() {
 
   return (
-    <div>
-      <span>Aquí va el banner</span>      
+    <div className="home-wrapper">
+      <HomePageBanner category={"Novedades"}/>   
       <section className="home-section">
         <h2>Blusas</h2>
         <HomeProductCard category={"Blusas"} />

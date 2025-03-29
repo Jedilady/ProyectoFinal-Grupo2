@@ -6,13 +6,13 @@ function ProductsPage() {
 
   //Parámetro para poder obtener la categoría que proviene del enlace anterior
   const { category } = useParams();
-  const { novedades } = useParams();
+  const { Novedades } = useParams();
 
   return (
     <div className="products-page">
-      <h1>{category ? category : (novedades ? novedades : "Nuestros productos")}</h1>
-      { novedades ? 
-        (<ProductsFiltered category={"novedades"}/>) :
+      <h1>{category ? category : (Novedades ? Novedades : "Nuestros productos")}</h1>
+      { Novedades ? 
+        (<ProductsFiltered category={"Novedades"}/>) :
         ( category ? 
           (<ProductsFiltered category={category}/>) : 
           (<ProductsFiltered category={"all"}/>)

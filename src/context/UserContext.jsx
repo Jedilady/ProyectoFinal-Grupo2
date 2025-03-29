@@ -1,11 +1,13 @@
 import { createContext, useState, useEffect, useMemo } from 'react';
 import { getAuthenticatedUser } from '../utils/userDDBB';
+import { useNavigate } from 'react-router-dom';
 
 // contexto para  usuario
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -31,6 +33,7 @@ export const UserProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('user');
+    navigate('/');
   };
 
   const contextValue = useMemo(() => ({ user, login, logout }), [user]);

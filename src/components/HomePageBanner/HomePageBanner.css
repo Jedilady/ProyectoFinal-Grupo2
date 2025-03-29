@@ -5,6 +5,12 @@
     align-items: center;
     background-color: var(--gray10);
     width: 100%;
+
+    .product-banner-link-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     .product-banner-imgs {
         max-width: 1440px;
@@ -26,13 +32,13 @@
             margin-bottom: 1rem;
         }
 
-        a {
+        button {
             background-color: var(--gray00);
             font-size: 1.5rem;
             padding: 0.5rem 2rem;
             transition: background-color 0.3s ease-in-out;
         }
-        a:hover {
+        button:hover {
             background-color: var(--gray10);
         }
     }

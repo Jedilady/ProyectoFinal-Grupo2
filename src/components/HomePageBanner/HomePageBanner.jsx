@@ -41,24 +41,26 @@ const HomePageBanner = ({category}) => {
 
     return (
         <div className="product-banner-wrapper">
-            <div className="product-banner-imgs">
-                <img 
-                    className='product-banner-img-left' 
-                    src={leftImg ? leftImg : "/img/default.jpg"} 
-                    alt={leftMsg ? `${leftMsg} - Modelo` : `Descripción no disponible`} 
-                />
-                <img 
-                    className='product-banner-img-right' 
-                    src={rightImg ? rightImg : "/img/default.jpg"} 
-                    alt={rightMsg ? `${rightMsg} - Modelo` : `Descripción no disponible`} 
-                />
-            </div>
-            <div className="product-banner-content">
-                <span>{category}</span>
-                <Link to={`/products/${category}`} className="secondary-button">
-                    click aquí
-                </Link>
-            </div>
+            <Link to={`/products/${category}`} className="product-banner-link-wrapper">
+                <div className="product-banner-imgs">
+                    <img 
+                        className='product-banner-img-left' 
+                        src={leftImg ? leftImg : "/img/default.jpg"} 
+                        alt={leftMsg ? `${leftMsg} - Modelo` : `Descripción no disponible`} 
+                    />
+                    <img 
+                        className='product-banner-img-right' 
+                        src={rightImg ? rightImg : "/img/default.jpg"} 
+                        alt={rightMsg ? `${rightMsg} - Modelo` : `Descripción no disponible`} 
+                    />
+                </div>
+                <div className="product-banner-content">
+                    <span>{category}</span>
+                        <button className="secondary-button">
+                            click aquí
+                        </button>
+                </div>
+            </Link>
         </div>
     );
 };

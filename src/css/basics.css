@@ -56,13 +56,18 @@ h2 {
         display: none;
     }    
 }
-@media screen and (min-width: 781px) and (max-width: 1439px) {
+@media screen and (min-width: 781px) and (max-width: 1090px) {
     .hidden-md {
         display: none;
     }    
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1091px) and (max-width: 1440px) {
     .hidden-lg {
+        display: none;
+    }    
+}
+@media screen and (min-width: 1441px) {
+    .hidden-xlg {
         display: none;
     }    
 }

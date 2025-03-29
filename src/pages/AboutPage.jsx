@@ -1,7 +1,9 @@
+import AboutComponent from '../components/aboutComponet/AboutComponet';
+
 function AdminPage() {
   return (
     <div>
-      <h1>Esto es About</h1>
+      <AboutComponent />
     </div>
   );
 }

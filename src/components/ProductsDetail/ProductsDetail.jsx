@@ -23,22 +23,47 @@ const handleAddToFavorites = () => {
     addToFavorites(product);  // Llama a la función del contexto para agregar a favoritos
 };
 
+const handleMouseEnter = (image) => {
+    setMainImage(image);
+};
+
+const [mainImage, setMainImage] = useState(product.images.model);
+
 return (
-    <div className="product-detail">
+    //<div className="product-detail">
+        
     <div className="product-images">
-        <img src={product.images.model} alt={product.name} />
-        <div className="image-thumbnails">
-        <img src={product.images.front} alt={`${product.name} front`} />
-        <img src={product.images.back} alt={`${product.name} back`} />
-        </div>
-    </div>
+
+    <div className="product-images">
+    <img src={mainImage} alt={product.name} className="main-image" />
+    <div className="image-thumbnails">
+
+    <img src={product.images.front} alt={`${product.name} front`}
+    onMouseEnter={() => handleMouseEnter(product.images.front)}
+    className="thumbnail"
+    />
+    <img
+    src={product.images.back} alt={`${product.name} back`}
+    onMouseEnter={() => handleMouseEnter(product.images.back)}
+    className="thumbnail"
+    />
+
+<img src={product.images.model} alt={`${product.name} model`}
+    onMouseEnter={() => handleMouseEnter(product.images.model)}
+    className="thumbnail"
+    />
+</div>
+</div>
 
     <div className="product-info">
         <h1>{product.name}</h1>
         <p>{product.description}</p>
         <p>Precio: {product.price} USD</p>
+        <p>Color:{product.color}</p>
         <p>Categoría: {product.category}</p>
         <p>Stock disponible: {product.stock}</p>
+
+
 
         <div>
         <label>Tamaño:</label>

@@ -6,7 +6,7 @@
     "category": "Blusas",
     "price": 19.80,
     "sizes": ["S", "M", "L", "XL"],
-    "colors":["#ff5733", "#fff546"],
+    "color":["#ff5733", "Beige","#218838"],
     "descripcion":"Blusa de algodón de manga larga.",
     "stock": 50,
     "images": {

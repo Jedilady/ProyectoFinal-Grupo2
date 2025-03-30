@@ -26,6 +26,7 @@ function App() {
     <UserProvider>
       <CartProvider>
         <AllProductsProvider>
+        <ProductsDetail/>
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />

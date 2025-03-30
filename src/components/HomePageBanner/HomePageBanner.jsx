@@ -35,7 +35,7 @@ const HomePageBanner = ({category}) => {
     const leftImg = leftProd.images.model;
     
     //llamadas a los nombre para el alt de la imagen de cada producto
-    const rightMsg = rightProd.images.model;
+    const rightMsg = rightProd.name;
     const leftMsg = leftProd.name;
     
 
@@ -45,12 +45,12 @@ const HomePageBanner = ({category}) => {
                 <div className="product-banner-imgs">
                     <img 
                         className='product-banner-img-left' 
-                        src={leftImg ? leftImg : "/img/default.jpg"} 
+                        src={leftImg ? leftImg : "/img/banner-default-1.jpg" } 
                         alt={leftMsg ? `${leftMsg} - Modelo` : `Descripción no disponible`} 
                     />
                     <img 
                         className='product-banner-img-right' 
-                        src={rightImg ? rightImg : "/img/default.jpg"} 
+                        src={rightImg ? rightImg : "/img/banner-default-2.jpg"} 
                         alt={rightMsg ? `${rightMsg} - Modelo` : `Descripción no disponible`} 
                     />
                 </div>

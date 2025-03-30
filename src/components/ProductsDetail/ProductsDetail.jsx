@@ -2,49 +2,13 @@ import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';  // Para obtener el id del producto desde la URL
 import { ProductsContext } from '../../context/ProductsContext';  // Importamos el contexto
 import '../ProductsDetail/ProductsDetail.css';
-import { useCart } from "../../context/CartContext.jsx";
-//import '../components/contex/CartContex.jsx';
 
 function ProductDetail() {
   const {id } = useParams();  // Obtener el id del producto desde la URL
-  const { allProducts, addToFavorites } = useContext(ProductsContext);  // Usamos el contexto
-  //const { addToCart } = useContext(CartContext); // Obtén la función de addToCart desde el contexto
-  const { addToCart } = useCart(); // Usamos la función de addToCart desde el CartContext
-
-const CartView = () => {
-    const { cart, totalItems, totalPrice } = useCart();
-
-    if (cart.length === 0) {
-    return <div>El carrito está vacío.</div>;
-    }
-
-    return (
-    <div>
-        <h2>Carrito de Compras</h2>
-        {cart.map((product) => (
-        <div key={product.id}>
-            <h3>{product.name}</h3>
-            <p>Precio: € {product.price}</p>
-            <p>Cantidad: {product.quantity}</p>
-        </div>
-        ))}
-        <div>
-        <p>Total de productos: {totalItems}</p>
-        <p>Total a pagar: € {totalPrice}</p>
-        </div>
-    </div>
-    );
-};
+  const { allProducts, addToCart, addToFavorites } = useContext(ProductsContext);  // Usamos el contexto
 
   // Filtramos el producto por su id
-
-  const productId = useParams().id;
-
-  if (!productId) {
-    return null; //Si no hay un ID valido no mostrara nada
-  }
-  
-  const product = allProducts.find(product => product.id.toString() === id);
+const product = allProducts.find(product => product.id.toString() === id);
 
 if (!product) {
     return <div>Producto no encontrado</div>;
@@ -64,29 +28,12 @@ const handleMouseEnter = (image) => {
 };
 
 const [mainImage, setMainImage] = useState(product.images.model);
+  
+return 
+    //<div className="product-detail">
+        
+    <div className="product-images">
 
-return (
-    <div className="product-detail">
-
-    <div className="product-info">
-        <h1>{product.name}</h1>
-        <p>{product.description}</p>
-        <p>Precio: {product.price} USD</p>
-        <p>Color:{product.color}</p>
-        <p>Categoría: {product.category}</p>
-        <p>Stock disponible: {product.stock}</p>
-
-        <div>
-        <label>Tamaño:</label>
-        <select>
-            {product.sizes.map((size) => (
-            <option key={size} value={size}>
-                {size}
-            </option>
-            ))}
-
-        </select>
-        </div>
     <div className="product-images">
     <img src={mainImage} alt={product.name} className="main-image" />
     <div className="image-thumbnails">
@@ -108,39 +55,31 @@ return (
 </div>
 </div>
 
+    <div className="product-info">
+        <h1>{product.name}</h1>
+        <p>{product.description}</p>
+        <p>Precio: {product.price} USD</p>
+        <p>Color:{product.color}</p>
+        <p>Categoría: {product.category}</p>
+        <p>Stock disponible: {product.stock}</p>
+
+        <div>
+        <label>Tamaño:</label>
+        <select>
+            {product.sizes.map((size) => (
+            <option key={size} value={size}>
+                {size}
+            </option>
+            ))}
+
+        </select>
+        </div>
+
         <div>
         <button onClick={handleAddToCart}>Añadir al carrito</button>
-
         <button onClick={handleAddToFavorites}>Agregar a favoritos</button>
         </div>
     </div>
     </div>
-);
 }
-
-//const CartView = () => {
-  //  const { cart, totalItems, totalPrice } = useCart();
-
-    //if (cart.length === 0) {
-    //return <div>El carrito está vacío.</div>;
-    //}
-
-  //  return (
- //   <div>
-   //     <h2>Carrito de Compras</h2>
-     //   {cart.map((product) => (
-       // <div key={product.id}>
-  //          <h3>{product.name}</h3>
-    //        <p>Precio: € {product.price}</p>
-      //      <p>Cantidad: {product.quantity}</p>
-    //    </div>
-     //   ))}
-     //   <div>
-     //   <p>Total de productos: {totalItems}</p>
-     //   <p>Total a pagar: € {totalPrice}</p>
-     //   </div>
-   // </div>
-  //  );
-//};
-
 export default ProductDetail;

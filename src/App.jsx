@@ -26,7 +26,7 @@ function App() {
     <UserProvider>
       <CartProvider>
         <AllProductsProvider>
-        <ProductsDetail/>
+        {/*<ProductsDetail/>*/}
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -35,7 +35,7 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:category" element={<ProductsPage />} />
             <Route path="/products/:novedades" element={<ProductsPage />} />
-            <Route path="/Product/:id" element={<ProductsDetail />} />
+            <Route path="/product/:id" element={<ProductsDetail />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/profile" element={<ProfilePage />} />

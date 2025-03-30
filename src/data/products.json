@@ -6,7 +6,7 @@
     "category": "Blusas",
     "price": 19.80,
     "sizes": ["S", "M", "L", "XL"],
-    "color":["#ff5733", "Beige","#218838"],
+    "color":["Blanco con Rayas Negras", "Blanco con Rayas Rojas", "Blanco con Rayas Azules"],
     "descripcion":"Blusa de algodón de manga larga.",
     "stock": 50,
     "images": {

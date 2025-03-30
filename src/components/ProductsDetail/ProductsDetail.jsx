@@ -11,7 +11,6 @@ function ProductDetail() {
   //const { addToCart } = useContext(CartContext); // Obtén la función de addToCart desde el contexto
   const { addToCart } = useCart(); // Usamos la función de addToCart desde el CartContext
 
-
 const CartView = () => {
     const { cart, totalItems, totalPrice } = useCart();
 
@@ -37,10 +36,15 @@ const CartView = () => {
     );
 };
 
-
-
   // Filtramos el producto por su id
-const product = allProducts.find(product => product.id.toString() === id);
+
+  const productId = useParams().id;
+
+  if (!productId) {
+    return null; //Si no hay un ID valido no mostrara nada
+  }
+  
+  const product = allProducts.find(product => product.id.toString() === id);
 
 if (!product) {
     return <div>Producto no encontrado</div>;
@@ -63,27 +67,6 @@ const [mainImage, setMainImage] = useState(product.images.model);
 
 return (
     <div className="product-detail">
-    
-    <div className="product-images">
-    <img src={mainImage} alt={product.name} className="main-image" />
-    <div className="image-thumbnails">
-
-    <img src={product.images.front} alt={`${product.name} front`}
-    onMouseEnter={() => handleMouseEnter(product.images.front)}
-    className="thumbnail"
-    />
-    <img
-    src={product.images.back} alt={`${product.name} back`}
-    onMouseEnter={() => handleMouseEnter(product.images.back)}
-    className="thumbnail"
-    />
-
-<img src={product.images.model} alt={`${product.name} model`}
-    onMouseEnter={() => handleMouseEnter(product.images.model)}
-    className="thumbnail"
-    />
-</div>
-</div>
 
     <div className="product-info">
         <h1>{product.name}</h1>
@@ -104,6 +87,26 @@ return (
 
         </select>
         </div>
+    <div className="product-images">
+    <img src={mainImage} alt={product.name} className="main-image" />
+    <div className="image-thumbnails">
+
+    <img src={product.images.front} alt={`${product.name} front`}
+    onMouseEnter={() => handleMouseEnter(product.images.front)}
+    className="thumbnail"
+    />
+    <img
+    src={product.images.back} alt={`${product.name} back`}
+    onMouseEnter={() => handleMouseEnter(product.images.back)}
+    className="thumbnail"
+    />
+
+<img src={product.images.model} alt={`${product.name} model`}
+    onMouseEnter={() => handleMouseEnter(product.images.model)}
+    className="thumbnail"
+    />
+</div>
+</div>
 
         <div>
         <button onClick={handleAddToCart}>Añadir al carrito</button>

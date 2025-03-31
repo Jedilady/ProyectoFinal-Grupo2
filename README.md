@@ -1,4 +1,3 @@
-```md
 # Nüa - Fashion Store
 
 **Nüa** is a fictional online clothing store inspired by brands like Mango, Lefties, and Zara.  
@@ -25,7 +24,6 @@ This project was developed as the final requirement for the Front-End Developmen
 
 ## 🚀 Installation & Usage
 
-```sh
 # Clone this repository
 git clone https://github.com/Jedilady/ProyectoFinal-Grupo2
 
@@ -40,7 +38,6 @@ npm run dev
 
 # Open the project in your browser at
 http://localhost:5173/
-```
 
 ## 📌 Status
 
@@ -63,4 +60,3 @@ This project is licensed under the **MIT License**.
 ## 💙 Acknowledgments
 
 Please visit the **"About Us"** section to see our gratitude to the **teaching team** that made this learning journey possible.
-```

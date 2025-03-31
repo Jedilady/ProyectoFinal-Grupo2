@@ -14,7 +14,6 @@
 .product-images {
     flex: 1;
     margin-right: 20px;
-    
 }
 
 .product-images img {
@@ -47,7 +46,7 @@
     border: 2px solid #ccc;
     cursor: pointer;
 }
-/* Estilos para la información del producto */
+  /* Estilos para la información del producto */
 .product-info {
     flex: 2;
     max-width: 500px;  /* Limita el ancho de la información */
@@ -56,12 +55,11 @@
 .product-info h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    margin-top: 40px;
 }
 
 .product-info p {
     font-size: 1rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 /*Estilos para el selector de tamaño */
@@ -71,7 +69,6 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    
 }
 /* Estilos para el selector de color */
 .color-circles {
@@ -94,12 +91,7 @@
         border: 1px solid var(--main-color);
         padding: 0.25rem 1rem;
         cursor: pointer;
-        transform: scale(1.1);
-        margin-bottom: 0px;
-        margin-top: 8px;
-        margin-left: 40px;
-
-        
+        margin-left: ;
     }
     
 /*
@@ -123,5 +115,4 @@
 
 .product-info .add-to-favorites:hover {
     background-color: #218838;
-}/*
-
+}

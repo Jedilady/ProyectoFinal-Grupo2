@@ -27,8 +27,8 @@ This project was developed as the final requirement for the Front-End Developmen
 ### Clone this repository
 git clone https://github.com/Jedilady/ProyectoFinal-Grupo2
 
-- Navigate to the project folder:
---cd ProyectoFinal-Grupo2
+- Navigate to the project folder:   
+  - cd ProyectoFinal-Grupo2
 
 - Install dependencies:
 -- npm install
@@ -51,10 +51,10 @@ This project is licensed under the **MIT License**.
 
 ## 📁 Additional Resources
 
-- [User flow on Figma](https://www.figma.com/board/HwqGdfTJ9vRyufPvJyLrGm/Grupo-2---Tienda-de-Ropa---IDEAS-Y-DIAGRAMA-DE-FLUJO?node-id=0-1&t=34AskrvSLLgcCzSs-1) We first worked in a user flow and gathered some ideas for the general design and main features. Evervything was represented here:
+- [User flow on Figma](https://www.figma.com/board/HwqGdfTJ9vRyufPvJyLrGm/Grupo-2---Tienda-de-Ropa---IDEAS-Y-DIAGRAMA-DE-FLUJO?node-id=0-1&t=34AskrvSLLgcCzSs-1) We first worked in a user flow and gathered some ideas for the general design and main features.
   
 
-- [Preliminary designs on Figma](https://www.figma.com/design/PdG8gXaWun6Of3JX3JTsf1/Bootcamp-Her-Tech?node-id=97-2&p=f) After that, we prepared the base designs of the main pages, including the responsive sizes. Some designs were altered in the final project for technical reasons. You can access the designs here:
+- [Preliminary designs on Figma](https://www.figma.com/design/PdG8gXaWun6Of3JX3JTsf1/Bootcamp-Her-Tech?node-id=97-2&p=f) After that, we prepared the base designs of the main pages, including the responsive sizes. Some designs were altered in the final project for technical reasons.
 
 ## 💙 Acknowledgments
 

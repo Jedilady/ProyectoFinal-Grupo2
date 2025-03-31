@@ -16,7 +16,7 @@ import CustomFooter from './components/customFooter/CustomFooter';
 import { AllProductsProvider } from './context/ProductsContext';
 import { CartProvider } from './context/CartContext';
 import CheckoutPage from './components/shoppingCart/CheckoutPage';
-/*import shoppingCart from "./components/shoppingCart/Cart";*/
+/*import shoppingCart from "./components/shoppingCart/Cart.css";*/
 import { UserProvider } from './context/UserContext';
 import './App.css';
 import ProductsDetail from './components/ProductsDetail/ProductsDetail';

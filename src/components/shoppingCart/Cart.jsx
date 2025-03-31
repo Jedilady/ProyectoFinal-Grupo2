@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { useCart} from "../context/CartContext";
-import "./Cart.css";
+import "../components/shoppingCart/Cart.css";
 
 const Cart = ({ product }) => {
   const { addToCart } = useCart(); //se encarga de añadir productos//

@@ -31,13 +31,13 @@ git clone https://github.com/Jedilady/ProyectoFinal-Grupo2
   - cd ProyectoFinal-Grupo2
 
 - Install dependencies:
--- npm install
+  - npm install
 
 - Run the development server:
--- npm run dev
+  - npm run dev
 
 - Open the project in your browser at:
--- http://localhost:5173/
+  - http://localhost:5173/
 
 ## 📌 Status
 

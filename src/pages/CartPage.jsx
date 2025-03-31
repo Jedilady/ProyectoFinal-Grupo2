@@ -13,33 +13,33 @@ export default CartPage;*/
 
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import "../components/shoppingCart/Cart.css";
 
 const CartPage = () => {
   const { cart, removeFromCart, totalPrice } = useCart();
 
   return (
-    <div className="Cesta">
-      <h1 className="Cesta">🛒 Carrito de Compra</h1>
+    <div className="cartContainer">
+      <h2 className="cartTitle"> Tú Carrito de Compra</h2>
       {cart.length === 0 ? (
-        <p> Está vacío. </p>
+        <h3 className="emptyCartMessage">Está vacío. </h3>
       ) : (
         <>
           <ul>
             {cart.map((item) => (
-              <li key={item.id} className="cesta">
+              <li key={item.id} className="cart-item">
                 <span> {item.name}  € {item.price} x {item.quantity}</span>
                 <button
-                  className="cesta"
-                  onClick={() => removeFromCart(item.id)}
-                >
-                  Eliminar
+                  className="cart-button"
+                  onClick={() => removeFromCart(item.id)}>
+                  Eliminar 
                 </button>
               </li>
             ))}
           </ul>
-          <p className="cesta">Total: € {totalPrice.toFixed(2)}</p>
-          <Link to="/checkout" className="cesta">
-            Ir a Pagar
+          <h4 className="totelPrice">Total: € {totalPrice.toFixed(2)}</h4>
+          <Link to="/checkout" className="checkoutLink">        
+            <h5>Pagar Ahora</h5>
           </Link>
         </>
       )}

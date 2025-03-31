@@ -4,6 +4,7 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import { FaShoppingCart } from "react-icons/fa";
+import "../components/shoppingCart/Cart.css";
 
 
 const Header = ()=>{

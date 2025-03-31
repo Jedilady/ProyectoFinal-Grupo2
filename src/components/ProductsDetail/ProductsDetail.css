@@ -7,14 +7,13 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap:8px;
+    gap:20px;
 }
 
   /* Estilos para la sección de imágenes del producto */
 .product-images {
     flex: 1;
     margin-right: 20px;
-    
 }
 
 .product-images img {
@@ -47,22 +46,20 @@
     border: 2px solid #ccc;
     cursor: pointer;
 }
-/* Estilos para la información del producto */
+  /* Estilos para la información del producto */
 .product-info {
     flex: 2;
-    max-width: 400px;  /* Limita el ancho de la información */
-    margin-right: 50px;
+    max-width: 500px;  /* Limita el ancho de la información */
 }
 
 .product-info h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    margin-top: 40px;
 }
 
 .product-info p {
     font-size: 1rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 /*Estilos para el selector de tamaño */
@@ -72,7 +69,6 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    
 }
 /* Estilos para el selector de color */
 .color-circles {
@@ -81,18 +77,6 @@
     margin-top: 10px;
 }
 
-/* Estilos para los botones */
-.product-info button {
-    border-radius: 500px;
-    border: 1px solid var(--main-color);
-    padding: 0.25rem 1rem;
-    cursor: pointer;
-    transform: scale(1.1);
-    margin-bottom: 0px;
-    margin-top: 8px;
-    margin-left: 40px;
-    
-}
 .color-circle {
     width: 50px;
     height: 50px;
@@ -101,6 +85,14 @@
     cursor: 'pointer',  /* Cambiar el cursor al pasar sobre el círculo*/
 }
 
+  /* Estilos para los botones */
+.product-info button {
+        border-radius: 100px;
+        border: 1px solid var(--main-color);
+        padding: 0.25rem 1rem;
+        cursor: pointer;
+        margin-left: ;
+    }
     
 /*
 .product-info .add-to-cart {
@@ -123,5 +115,4 @@
 
 .product-info .add-to-favorites:hover {
     background-color: #218838;
-}*/
-
+}

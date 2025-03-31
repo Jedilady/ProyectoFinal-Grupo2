@@ -4,6 +4,7 @@ import products from "../data/products";
 //importación de context y hooks from react:
 import { createContext} from "react";
 import { useState, useEffect } from "react";
+import ProductsDetail from "../components/ProductsDetail/ProductsDetail";
 
 //Creación del CONTEXTO
 export const ProductsContext = createContext();

@@ -24,19 +24,19 @@ This project was developed as the final requirement for the Front-End Developmen
 
 ## 🚀 Installation & Usage
 
-# Clone this repository
+### Clone this repository
 git clone https://github.com/Jedilady/ProyectoFinal-Grupo2
 
-# Navigate to the project folder
+- Navigate to the project folder
 cd ProyectoFinal-Grupo2
 
-# Install dependencies
+- Install dependencies
 npm install
 
-# Run the development server
+- Run the development server
 npm run dev
 
-# Open the project in your browser at
+- Open the project in your browser at
 http://localhost:5173/
 
 ## 📌 Status

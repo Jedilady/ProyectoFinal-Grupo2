@@ -8,10 +8,11 @@ This project was developed as the final requirement for the Front-End Developmen
 - Browse different product categories.
 - View detailed information about each product.
 - Add products to the shopping cart.
-- Fake checkout process.
-- User authentication (registration, login, and profile editing).
-- Contact form for sending messages.
-- Responsive and mobile-friendly design.
+- Complete a **fake checkout process**.
+- Register and log in to manage their shopping experience.
+- Edit their profile (name, email, and password).
+- Send messages through the **contact form**.
+- Enjoy a **mobile-friendly** UI.
 
 ⚠ **Note:** You must be registered and logged in to use the shopping cart. Newly created users are not preloaded with test data.
 
@@ -39,9 +40,33 @@ git clone https://github.com/Jedilady/ProyectoFinal-Grupo2
 - Open the project in your browser at:
   - http://localhost:5173/
 
-## 📌 Status
+## 📌 Version
 
-✅ **Finalized** – No further updates or contributions are planned.
+- Current version: 1.0.0
+- Status: ✅ Finalized (No further updates or contributions are planned.)
+
+## 🔗 App Routes (Endpoints)
+
+The application uses **React Router** for navigation. Below are the main routes:
+
+- **Home (Landing Page)** 
+  - / 
+- **Products**
+  - /products
+  - /products/Blusas
+  - /products/Pantalones
+  - /products/Vestidos 
+  - /products/Novedades
+  - /Product/id
+- **Cart**
+  - /cart
+- **User**
+  - /profile
+  - /register
+  - /login
+- **About**
+  - /about
+  - /contact
 
 ## 📜 License
 
@@ -59,3 +84,10 @@ This project is licensed under the **MIT License**.
 ## 💙 Acknowledgments
 
 Please visit the **"About Us"** section to see our gratitude to the **teaching team** that made this learning journey possible.
+
+## Authors
+
+- [Camacaro, Delcy](https://github.com/Delcyacp),
+- [Hernandez, Juvili](https://github.com/Jedilady)
+- [Troconis, Leidy](https://github.com/Leidymt2024) 
+- [Paz,Jennifer](https://github.com/Jenn88PH)
